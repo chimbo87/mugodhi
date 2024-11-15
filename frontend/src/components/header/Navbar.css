@@ -1,0 +1,211 @@
+.navbar-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #0897d4;
+    position: fixed;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    z-index: 1000;
+  }
+  .navbar-container-top{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .navbar-container-bottom{
+    width: 100%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 10px;
+    margin-top: 10px;
+  }
+  .logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .logo img {
+    width: 100px;
+    height: 50px;
+    object-fit: contain;
+  }
+  .logo h6 {
+    font-weight: 700;
+    font-size: 14px;
+    color: #efecec;
+    /* background: -webkit-linear-gradient(0deg, #ff6b6b, #ffa500, #40e0d0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
+    margin-top: 5px;
+  }
+  .navbar-user-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .navbar-user-img img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  .navbar-user-info {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    margin-left: 5px;
+  }
+  .navbar-user-menu{
+    display: none;
+    margin-left: 10px;
+  }
+  .navbar-user-menuicon{
+    color: #fff;
+    font-size: 35px;
+  }
+  .navbar-card-links {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .navbar-card-bottom{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .navbar-links-icon {
+    color: #fff;
+    font-size: 25px;
+  }
+  .navbar-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0px 10px;
+    padding: 2px 10px;
+    cursor: pointer;
+  }
+  .navbar-links.active {
+    border-bottom: 2px solid #f99756;
+  }
+  .navbar-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 12px;
+  }
+  .navbar-user-details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #ffffff5a;
+    padding: 5px;
+    border-radius: 4px;
+  }
+  .navbar-user-name {
+    font-weight: 600;
+    color: #fff;
+    font-size: 14px;
+  }
+  .navbar-user-title{
+    color: #fff;
+    font-weight: 400;
+  }
+  .drawer-wrap{
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+  }
+  .drawer-wrap-top{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+  }
+  .drawer-wrap-top button{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 5px 0px;
+    border-radius: 4px;
+    border: none;
+    background-color: #0897d4;
+    color: #fff;
+    font-weight: 600;
+  }
+  .drawer-wrap-icon{
+    margin-right: 8px;
+  }
+  .drawer-logout{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+  }
+  .drawer-logout button{
+  padding: 8px 25px;
+  border: 2px solid #0897d4;
+  border-radius: 4px;
+  background-color: gainsboro;
+  color: #0897d4;
+  }
+  @media (max-width: 770px) {
+    .navbar-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 5px;
+      background-color: #0897d4;
+      position: fixed;
+      left: 0%;
+      right: 0%;
+      top: 0%;
+      z-index: 1000;
+    }
+    .navbar-card-links {
+      display: none;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .navbar-container-bottom{
+      width: 100%;
+      display: block;
+      align-items: center;
+      justify-content: center;
+      padding: 0px 10px;
+      margin-top: 10px;
+    }
+    .navbar-links {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      margin: 0px 5px;
+      padding: 2px 10px;
+      cursor: pointer;
+    }
+    .navbar-user-details{
+    border: 1px solid transparent;
+     }
+   .navbar-user-info{
+    display: none;
+   }
+   .navbar-user-menu{
+    display: block;
+    margin-left: 15px;
+  }
+  }
