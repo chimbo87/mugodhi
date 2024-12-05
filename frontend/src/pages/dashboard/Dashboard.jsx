@@ -47,10 +47,8 @@ function Dashboard() {
               <Collapse ghost>
                 <Panel
                   header={
-                    <button>
-                      <span>
-                        <b>Financial Records</b>
-                      </span>
+                    <button id="records-btn">
+                      <span>Financial Records</span>
                     </button>
                   }
                   key="1"
@@ -67,10 +65,8 @@ function Dashboard() {
               <Collapse ghost>
                 <Panel
                   header={
-                    <button>
-                      <span>
-                        <b>Church Records</b>
-                      </span>
+                    <button id="records-btn">
+                      <span>Church Records</span>
                     </button>
                   }
                   key="1"
@@ -99,8 +95,8 @@ function Dashboard() {
             </div>
             <div id="dashboardSideBarBtnsDiv">
               <button>
-              <Badge count={15}><IoNotificationsOutline  id="dashboardSideBarBtnsIcons" />{" "}</Badge>
-                Notifications
+                <IoNotificationsOutline id="dashboardSideBarBtnsIcons" />
+                Reports
               </button>
             </div>
             <div id="dashboardSideBarBtnsDiv">

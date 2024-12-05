@@ -19,7 +19,7 @@
   transition: width 0.3s ease;
   background-color: #fff;
   padding: 5px 10px;
-  background-color: #dcdcdc3b;
+  /* background-color: #dcdcdc3b; */
 }
 #dashboardSideBarLogo {
   display: flex;
@@ -57,7 +57,7 @@
   justify-content: start;
   border: 1px solid #80808037;
   margin-top: 5px;
-  padding: 10px 0px;
+ height: 50px;
   border-radius: 4px;
 }
 #dashboardSideBarBtnsDiv button {
@@ -69,11 +69,13 @@
   border: none;
   background-color: transparent;
   color: #808080;
+  border-radius: 4px;
 }
-#dashboardSideBarBtnsDiv:hover {
-  background-color: #fafdfe;
+#dashboardSideBarBtnsDiv button:hover{
+  background-color: #00a6ff;
   color: #fff;
 }
+
 #dashboardSideBarBtnsIcons {
   margin-right: 10px;
 }
@@ -87,7 +89,11 @@
     margin-top: 5px;
     border-radius: 4px;
 }
-#dashboardSideBarBtnsCol button{
+#dashboardSideBarBtnsCol:hover{
+background-color: #00a6ff;
+}
+
+/* #dashboardSideBarBtnsCol button{
     width: 100%;
     height: 100%;
     display: flex;
@@ -96,13 +102,26 @@
     border: none;
     background-color: transparent;
     color: #808080;
-}
+} */
 .church-records-buttons{
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: start;
     justify-content: center;
+}
+#records-btn{
+  width: 100%;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: none;
+}
+#records-btn:hover{
+  background-color: #00a6ff;
+  color: #fff;
 }
 .nested-btn{
     padding: 8px 0px;
