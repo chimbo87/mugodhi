@@ -43,7 +43,7 @@ function Login() {
             <button onClick={() => navigate("/dashboard")}>Login</button>
           </div>
           <div id="login-card-formwrap">
-            <p>Forget Password</p>
+            <p id="forgetpsswd-link">Forget Password</p>
           </div>
           <div id="login-card-formrights">
             <small>&copy; 2024 AFC Joburg Branch. Crafted by Chimbo</small>

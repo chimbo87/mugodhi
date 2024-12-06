@@ -117,6 +117,8 @@ background-color: #00a6ff;
   align-items: center;
   justify-content: center;
   background-color: transparent;
+  color: #808080;
+  font-weight: 400;
   border: none;
 }
 #records-btn:hover{

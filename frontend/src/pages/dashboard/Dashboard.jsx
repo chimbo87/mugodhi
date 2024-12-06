@@ -1,22 +1,29 @@
-import React from "react";
+import React, { useState } from "react";
 import { Outlet } from "react-router-dom";
-import { Collapse, Avatar, Badge } from "antd";
+import { Collapse } from "antd";
 import { RxDashboard } from "react-icons/rx";
-import { IoDocumentTextOutline } from "react-icons/io5";
 import { IoNotificationsOutline } from "react-icons/io5";
-import { LiaBibleSolid } from "react-icons/lia";
-import { FaUsersLine } from "react-icons/fa6";
-import { GoLaw } from "react-icons/go";
 import { PiUsersThree } from "react-icons/pi";
 import { FaRegUser } from "react-icons/fa6";
-import { MdOutlineRemoveRedEye } from "react-icons/md";
-import { MdOutlinePayments } from "react-icons/md";
 import { LuCalendarClock } from "react-icons/lu";
 import logo from "../../assets/images/logo.png";
 import "./Dashboard.css";
 
 function Dashboard() {
   const { Panel } = Collapse;
+  const [activeButton, setActiveButton] = useState(null);
+
+  // Handler to set active button
+  const handleButtonClick = (buttonName) => {
+    setActiveButton(buttonName);
+  };
+
+  // Custom style for active button
+  const getButtonStyle = (buttonName) => {
+    return activeButton === buttonName
+      ? { backgroundColor: "#00a6ff", color: "white" }
+      : {};
+  };
 
   return (
     <div id="theDashboard">
@@ -27,18 +34,27 @@ function Dashboard() {
           </div>
           <div id="dashboardSideBarBtns">
             <div id="dashboardSideBarBtnsDiv">
-              <button>
+              <button
+                style={getButtonStyle("overview")}
+                onClick={() => handleButtonClick("overview")}
+              >
                 <RxDashboard id="dashboardSideBarBtnsIcons" /> Overview
               </button>
             </div>
             <div id="dashboardSideBarBtnsDiv">
-              <button>
+              <button
+                style={getButtonStyle("members")}
+                onClick={() => handleButtonClick("members")}
+              >
                 <PiUsersThree id="dashboardSideBarBtnsIcons" /> Members
               </button>
             </div>
 
             <div id="dashboardSideBarBtnsDiv">
-              <button>
+              <button
+                style={getButtonStyle("events")}
+                onClick={() => handleButtonClick("events")}
+              >
                 <LuCalendarClock id="dashboardSideBarBtnsIcons" /> Events
               </button>
             </div>
@@ -47,67 +63,109 @@ function Dashboard() {
               <Collapse ghost>
                 <Panel
                   header={
-                    <button id="records-btn">
+                    <button
+                      id="records-btn"
+                      style={getButtonStyle("financialRecords")}
+                      onClick={() => handleButtonClick("financialRecords")}
+                    >
                       <span>Financial Records</span>
                     </button>
                   }
                   key="1"
                 >
                   <div className="church-records-buttons">
-                    <button className="nested-btn">Rent Payments</button>
-                    <button className="nested-btn">Offerings</button>
-                    <button className="nested-btn">Pledges</button>
+                    <button
+                      className="nested-btn"
+                      style={getButtonStyle("rentPayments")}
+                      onClick={() => handleButtonClick("rentPayments")}
+                    >
+                      Rent Payments
+                    </button>
+                    <button
+                      className="nested-btn"
+                      style={getButtonStyle("offerings")}
+                      onClick={() => handleButtonClick("offerings")}
+                    >
+                      Offerings
+                    </button>
+                    <button
+                      className="nested-btn"
+                      style={getButtonStyle("pledges")}
+                      onClick={() => handleButtonClick("pledges")}
+                    >
+                      Pledges
+                    </button>
                   </div>
                 </Panel>
               </Collapse>
+            </div>
+            {/* Similar modifications for other buttons... */}
+            <div id="dashboardSideBarBtnsDiv">
+              <button
+                style={getButtonStyle("reports")}
+                onClick={() => handleButtonClick("reports")}
+              >
+                <IoNotificationsOutline id="dashboardSideBarBtnsIcons" />
+                Reports
+              </button>
             </div>
             <div id="dashboardSideBarBtnsCol">
               <Collapse ghost>
                 <Panel
                   header={
-                    <button id="records-btn">
+                    <button
+                      id="records-btn"
+                      style={getButtonStyle("financialRecords")}
+                      onClick={() => handleButtonClick("financialRecords")}
+                    >
                       <span>Church Records</span>
                     </button>
                   }
                   key="1"
                 >
                   <div className="church-records-buttons">
-                    <button className="nested-btn">
-                      {" "}
-                      <MdOutlineRemoveRedEye id="dashboardSideBarBtnsIcons" />{" "}
-                      Prophecy Records
+                    <button
+                      className="nested-btn"
+                      style={getButtonStyle("rentPayments")}
+                      onClick={() => handleButtonClick("rentPayments")}
+                    >
+                      Rent Payments
                     </button>
-                    <button className="nested-btn">
-                      <GoLaw id="dashboardSideBarBtnsIcons" />
-                      Displinary Records
+                    <button
+                      className="nested-btn"
+                      style={getButtonStyle("offerings")}
+                      onClick={() => handleButtonClick("offerings")}
+                    >
+                      Offerings
                     </button>
-                    <button className="nested-btn">
-                      <LiaBibleSolid id="dashboardSideBarBtnsIcons" />
-                      Babtism Records
-                    </button>
-                    <button className="nested-btn">
-                      <FaUsersLine id="dashboardSideBarBtnsIcons" /> Meetings
-                      Records
+                    <button
+                      className="nested-btn"
+                      style={getButtonStyle("pledges")}
+                      onClick={() => handleButtonClick("pledges")}
+                    >
+                      Pledges
                     </button>
                   </div>
                 </Panel>
               </Collapse>
             </div>
             <div id="dashboardSideBarBtnsDiv">
-              <button>
-                <IoNotificationsOutline id="dashboardSideBarBtnsIcons" />
-                Reports
-              </button>
-            </div>
-            <div id="dashboardSideBarBtnsDiv">
-              <button>
+              <button
+                style={getButtonStyle("profile")}
+                onClick={() => handleButtonClick("profile")}
+              >
                 <FaRegUser id="dashboardSideBarBtnsIcons" /> Profile
               </button>
             </div>
           </div>
         </div>
         <div>
-          <button>Logout</button>
+          <button
+            style={getButtonStyle("logout")}
+            onClick={() => handleButtonClick("logout")}
+          >
+            Logout
+          </button>
         </div>
       </div>
       <div id="dashBoardContent">
