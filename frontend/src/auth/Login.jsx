@@ -14,7 +14,7 @@ function Login() {
   const navigate = useNavigate();
   return (
     <div id="login-page">
-      <div id="login-card">
+      <div id="login-img-card">
         <img src={banner} alt="coverbanner" />
       </div>
       <div id="login-card">

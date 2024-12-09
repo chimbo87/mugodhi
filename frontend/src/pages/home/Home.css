@@ -8,13 +8,13 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #00a6ff;
+    /* background-color: #00a6ff; */
     padding: 8px 4px;
     border-radius: 2px;
     width: 100%;
 }
 #home-page-headtext h5{
-    color: #fff;
+    color: #5d5c5c;
     font-weight: 600;
 }
 #home-page-headiconbox{
@@ -22,7 +22,7 @@
     cursor: pointer;
 }
 #home-page-headicon{
-    color: #fff;
+    color: #6b6a6a;
     font-size: 28px;
     cursor: pointer;
 }

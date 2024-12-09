@@ -19,7 +19,7 @@
   transition: width 0.3s ease;
   background-color: #fff;
   padding: 5px 10px;
-  /* background-color: #dcdcdc3b; */
+
 }
 #dashboardSideBarLogo {
   display: flex;
@@ -92,17 +92,6 @@
 #dashboardSideBarBtnsCol:hover{
 background-color: #00a6ff;
 }
-
-/* #dashboardSideBarBtnsCol button{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: start;
-    border: none;
-    background-color: transparent;
-    color: #808080;
-} */
 .church-records-buttons{
     width: 100%;
     display: flex;
@@ -131,9 +120,56 @@ background-color: #00a6ff;
     border: 1px solid red;
     background-color: #808080;
 }
+#logout-box{
+  width: 100%;
+  display:flex ;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+}
+#logout-box button{
+  width: 100%;
+  padding: 12px 0px;
+  border: none;
+  border-radius: 4px;
+  color: #00a6ff;
+  font-weight: 700;
+}
+#logout-box button:hover{
+color: #fff;
+background-color: #00a6ff;
+}
 #dashBoardContent {
   flex: 1;
-  padding: 20px;
+  padding: 12px;
   margin-left: 250px;
   transition: margin-left 0.3s ease;
+
+}
+
+
+@media (max-width: 780px) {
+  #dashboardSideBar {
+    position: fixed;
+    top: 0%;
+    bottom: 0%;
+    width: 250px;
+    min-height: 100%;
+    display: none;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+    z-index: 2;
+    transition: width 0.3s ease;
+    background-color: #fff;
+    padding: 5px 10px;
+  
+  }
+  #dashBoardContent {
+    flex: 1;
+    padding: 12px;
+    margin-left: 0px;
+    transition: margin-left 0.3s ease;
+  
+  }
 }
