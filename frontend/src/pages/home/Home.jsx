@@ -1,10 +1,12 @@
 import React from "react";
-import "./Home.css";
 import { IoNotificationsOutline } from "react-icons/io5";
 import userlogo from "../../assets/images/person.jpeg";
 import { Badge } from "antd";
+import "./Home.css";
+import { useNavigate } from "react-router-dom";
 
 function Home() {
+  const navigate = useNavigate();
   return (
     <div id="home-page">
       <div id="home-page-head">
@@ -12,13 +14,13 @@ function Home() {
           <h5>Hello, John Doe !</h5>
         </div>
         <div id="home-page-headuser">
-          <div id="home-page-headiconbox">
+          <div id="home-page-headiconbox"  onClick={() => navigate("/dashboard/notifications")}>
             <Badge count={15}>
-              <IoNotificationsOutline id="home-page-headicon" />
+              <IoNotificationsOutline id="home-page-headicon"/>
             </Badge>
           </div>
 
-          <img src={userlogo} alt="user" />
+          <img src={userlogo} alt="user" onClick={() => navigate("/dashboard/profile")}/>
         </div>
       </div>
       <div id="overview-box">

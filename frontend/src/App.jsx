@@ -14,6 +14,7 @@ import Home from "./pages/home/Home";
 import Members from "./pages/members/Members";
 import Notifications from "./pages/notices/Notifications";
 import Payments from "./pages/payments/Payments";
+import Profile from "./pages/profile/Profile";
 function App() {
   const router = createBrowserRouter(
     createRoutesFromElements(
@@ -26,6 +27,7 @@ function App() {
           <Route path="members" element={<Members/>} />
           <Route path="notifications" element={<Notifications/>} />
           <Route path="payments" element={<Payments/>} />
+          <Route path="profile" element={<Profile/>} />
         </Route>
       </Route>
     )
