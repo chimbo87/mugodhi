@@ -71,14 +71,12 @@ function Dashboard() {
                 </button>
               </div>
 
-              <div id="dashboardSideBarBtnsCol">
+              <div id="dashboardSideBarBtnsColpse">
                 <Collapse ghost>
                   <Panel
                     header={
                       <button
-                        id="records-btn"
-                        style={getButtonStyle("financialRecords")}
-                        onClick={() => handleButtonClick("financialRecords")}
+                      id="records-btn-colapse"
                       >
                         <span>Financial Records</span>
                       </button>
@@ -122,14 +120,12 @@ function Dashboard() {
                   Reports
                 </button>
               </div>
-              <div id="dashboardSideBarBtnsCol">
+              <div id="dashboardSideBarBtnsColpse">
                 <Collapse ghost>
                   <Panel
                     header={
                       <button
-                        id="records-btn"
-                        style={getButtonStyle("financialRecords")}
-                        onClick={() => handleButtonClick("financialRecords")}
+                        id="records-btn-colapse"
                       >
                         <span>Church Records</span>
                       </button>
@@ -139,24 +135,31 @@ function Dashboard() {
                     <div className="church-records-buttons">
                       <button
                         className="nested-btn"
-                        style={getButtonStyle("rentPayments")}
-                        onClick={() => handleButtonClick("rentPayments")}
+                        style={getButtonStyle("prophecy")}
+                        onClick={() => handleButtonClick("prophecy")}
                       >
-                        Rent Payments
+                      Prophecy Records
                       </button>
                       <button
                         className="nested-btn"
-                        style={getButtonStyle("offerings")}
-                        onClick={() => handleButtonClick("offerings")}
+                        style={getButtonStyle("displinary")}
+                        onClick={() => handleButtonClick("displinary")}
                       >
-                        Offerings
+                      Displinary Records
                       </button>
                       <button
                         className="nested-btn"
-                        style={getButtonStyle("pledges")}
-                        onClick={() => handleButtonClick("pledges")}
+                        style={getButtonStyle("babtism")}
+                        onClick={() => handleButtonClick("babtism")}
                       >
-                        Pledges
+                       Babtism Records
+                      </button>
+                      <button
+                        className="nested-btn"
+                        style={getButtonStyle("meeting")}
+                        onClick={() => handleButtonClick("meeting")}
+                      >
+                       Meeting Records
                       </button>
                     </div>
                   </Panel>

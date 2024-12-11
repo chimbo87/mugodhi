@@ -1,14 +1,8 @@
-#home-page {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-}
+
 #home-page-head {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  /* background-color: #00a6ff; */
   padding: 8px 4px;
   border-radius: 2px;
   width: 100%;
@@ -38,22 +32,86 @@
   object-fit: cover;
   cursor: pointer;
 }
-#overview-box {
-  margin-top: 10px;
-}
-#overview-card {
-  border: 1px solid gray;
-  padding: 5px;
+#home-card {
+  border: 1px solid #c5c3c3;
+  padding: 10px 5px;
   border-radius: 4px;
+  background-color: #fff;
+  margin: 15px 0px;
+}
+#home-card-innerbox {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#home-card-innerbox button {
+  color: #ffbb28;
+  border: none;
+  background-color: transparent;
+}
+#home-card-innerboxicon {
+  color: #5d5c5c;
+  font-size: 28px;
+}
+#home-innerbox-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#home-innerbox-card small {
+  color: #ffbb28;
+  font-weight: 700;
+}
+#home-line-chart {
+  border: 1px solid #d7d6d6;
+  background-color: #e7e7e745;
+  padding: 10px 0px;
+  height: 475px;
+}
+#home-line-chart h6 {
+  text-align: center;
+  font-weight: 600;
+
+  color: #800080;
+}
+#home-pie-chart {
+  border: 1px solid #d7d6d6;
+  background-color: #e7e7e745;
+  padding: 10px 0px;
+}
+#home-pie-chart h6 {
+  text-align: center;
+  font-weight: 600;
+
+  color: #800080;
 }
 @media (max-width: 700px) {
-    #home-page-head {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-      background-color: #cecccc33;
-        padding: 8px 10px;
-        border-radius: 2px;
-        width: 100%;
-      }
+  #home-page-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #cecccc33;
+    padding: 8px 10px;
+    border-radius: 2px;
+    width: 100%;
+  }
+  #home-line-chart {
+    border: 1px solid #d7d6d6;
+    background-color: #e7e7e745;
+    margin-top: 12px;
+  }
+  #home-pie-chart {
+    border: 1px solid #d7d6d6;
+    background-color: #e7e7e745;
+    margin-top: 12px;
+  }
+  #home-card {
+    border: 1px solid #c5c3c3;
+    padding: 10px 5px;
+    border-radius: 4px;
+    background-color: #fff;
+    margin: 5px 0px;
+  }
 }

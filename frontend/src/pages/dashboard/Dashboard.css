@@ -19,7 +19,6 @@
   transition: width 0.3s ease;
   background-color: #fff;
   padding: 5px 10px;
-
 }
 #dashboardSideBarLogo {
   display: flex;
@@ -57,7 +56,7 @@
   justify-content: start;
   border: 1px solid #80808037;
   margin-top: 5px;
- height: 50px;
+  height: 50px;
   border-radius: 4px;
 }
 #dashboardSideBarBtnsDiv button {
@@ -71,7 +70,7 @@
   color: #808080;
   border-radius: 4px;
 }
-#dashboardSideBarBtnsDiv button:hover{
+#dashboardSideBarBtnsDiv button:hover {
   background-color: #00a6ff;
   color: #fff;
 }
@@ -79,27 +78,37 @@
 #dashboardSideBarBtnsIcons {
   margin-right: 10px;
 }
-#dashboardSideBarBtnsCol{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    justify-content: start;
-    border: 1px solid #80808037;
-    margin-top: 5px;
-    border-radius: 4px;
+#dashboardSideBarBtnsCol {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  border: 1px solid #80808037;
+  margin-top: 5px;
+  border-radius: 4px;
 }
-#dashboardSideBarBtnsCol:hover{
-background-color: #00a6ff;
+#dashboardSideBarBtnsCol:hover {
+  background-color: #00a6ff;
 }
-.church-records-buttons{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    justify-content: center;
+#dashboardSideBarBtnsColpse {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  border: 1px solid #80808037;
+  margin-top: 5px;
+  border-radius: 4px;
 }
-#records-btn{
+.church-records-buttons {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+}
+#records-btn {
   width: 100%;
   font-size: 18px;
   display: flex;
@@ -110,24 +119,42 @@ background-color: #00a6ff;
   font-weight: 400;
   border: none;
 }
-#records-btn:hover{
+#records-btn:hover {
   background-color: #00a6ff;
   color: #fff;
 }
-.nested-btn{
-    padding: 8px 0px;
-    border-radius: 4px;
-    border: 1px solid red;
-    background-color: #808080;
-}
-#logout-box{
+#records-btn-colapse {
   width: 100%;
-  display:flex ;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  color: #808080;
+  font-weight: 400;
+  border: none;
+}
+.nested-btn {
+  width: 100%;
+  padding: 8px 0px;
+  border: 1px solid #dddddd7b;
+  color: #616161;
+  border-radius: 4px;
+  background-color: #eceaea7b;
+  margin: 2px 0px;
+}
+.nested-btn:hover {
+  background-color: #00a6ff;
+  color: #fff;
+}
+#logout-box {
+  width: 100%;
+  display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 4px;
 }
-#logout-box button{
+#logout-box button {
   width: 100%;
   padding: 12px 0px;
   border: none;
@@ -135,18 +162,16 @@ background-color: #00a6ff;
   color: #00a6ff;
   font-weight: 700;
 }
-#logout-box button:hover{
-color: #fff;
-background-color: #00a6ff;
+#logout-box button:hover {
+  color: #fff;
+  background-color: #00a6ff;
 }
 #dashBoardContent {
   flex: 1;
   padding: 12px;
   margin-left: 250px;
   transition: margin-left 0.3s ease;
-
 }
-
 
 @media (max-width: 780px) {
   #dashboardSideBar {
@@ -163,13 +188,11 @@ background-color: #00a6ff;
     transition: width 0.3s ease;
     background-color: #fff;
     padding: 5px 10px;
-  
   }
   #dashBoardContent {
     flex: 1;
     padding: 12px;
     margin-left: 0px;
     transition: margin-left 0.3s ease;
-  
   }
 }
