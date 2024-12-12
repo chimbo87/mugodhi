@@ -1,15 +1,76 @@
-import React from 'react'
+import React from 'react';
+import { Button, Segmented, Tabs } from 'antd';
 
-function Payments() {
-  return (
-    <div>
-      <p>   Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, illum
+const onChange = (key) => {
+  console.log(key);
+};
+const items = [
+  {
+    key: '1',
+    label: (<div>
+       <Button type='primary'>Rent</Button>
+    </div>),
+    children: (<div>
+      <h6>Rent</h6>
+       <p>   Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, illum
         asperiores, incidunt dolorem natus ipsa ut voluptates delectus quae
         minima, eveniet sit? Error unde recusandae quod, perspiciatis adipisci
         fugiat consequatur?   Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, illum
         asperiores, incidunt dolorem natus ipsa ut voluptates delectus quae
         minima, eveniet sit? Error unde recusandae quod, perspiciatis adipisci
         fugiat consequatur?</p>
+    </div>),
+  },
+  {
+    key: '2',
+    label: (<div>
+        <Button>Pledges</Button>
+    </div>),
+    children: (<div>
+      <h6>Pledges</h6>
+       <p>   Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, illum
+        asperiores, incidunt dolorem natus ipsa ut voluptates delectus quae
+        minima, eveniet sit? Error unde recusandae quod, perspiciatis adipisci
+        fugiat consequatur?   Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, illum
+        asperiores, incidunt dolorem natus ipsa ut voluptates delectus quae
+        minima, eveniet sit? Error unde recusandae quod, perspiciatis adipisci
+        fugiat consequatur?</p>
+    </div>),
+  },
+  {
+    key: '3',
+    label: (<div>
+     <Button>Offerings</Button>
+    </div>),
+    children: (<div>
+      <h6>Offerings</h6>
+       <p>   Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, illum
+        asperiores, incidunt dolorem natus ipsa ut voluptates delectus quae
+        minima, eveniet sit? Error unde recusandae quod, perspiciatis adipisci
+        fugiat consequatur?   Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, illum
+        asperiores, incidunt dolorem natus ipsa ut voluptates delectus quae
+        minima, eveniet sit? Error unde recusandae quod, perspiciatis adipisci
+        fugiat consequatur?</p>
+    </div>),
+  },
+];
+
+function Payments() {
+  const [alignValue, setAlignValue] = React.useState('center');
+  return (
+    <div>
+      <small>Finances</small>
+     
+      <Tabs
+        defaultActiveKey="1"
+        items={items}
+        onChange={onChange}
+        indicator={{
+          size: (origin) => origin - 20,
+          align: alignValue,
+        }}
+      />
+     
     </div>
   )
 }

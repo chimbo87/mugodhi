@@ -9,7 +9,8 @@
 }
 #home-page-headtext h5 {
   color: #5d5c5c;
-  font-weight: 600;
+  font-weight: 700;
+  font-family: "Raleway", sans-serif;
 }
 #home-page-headiconbox {
   margin-right: 45px;
@@ -44,6 +45,11 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: 15px;
+}
+#home-card-innerbox p{
+    color: #5d5c5c;
+    font-weight: 700;
 }
 #home-card-innerbox button {
   color: #ffbb28;
@@ -57,13 +63,18 @@
 #home-innerbox-card {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: start;
   justify-content: center;
 }
 #home-innerbox-card small {
-  color: #ffbb28;
+  color: #8e8e8d;
   font-weight: 700;
 }
+#home-innerbox-card p{
+    color: #087cd4;
+    font-weight: 700;
+    font-family: "Raleway", sans-serif;
+  }
 #home-line-chart {
   border: 1px solid #d7d6d6;
   background-color: #e7e7e745;

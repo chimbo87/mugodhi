@@ -1,10 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { IoNotificationsOutline } from "react-icons/io5";
 import userlogo from "../../assets/images/person.jpeg";
 import { MdOutlineEventAvailable } from "react-icons/md";
 import { FaUsers } from "react-icons/fa";
-import { FaArrowRightLong } from "react-icons/fa6";
-import { Badge } from "antd";
+import { TbReportMoney } from "react-icons/tb";
+import { Button, Flex, Progress, Badge } from "antd";
 import "./Home.css";
 import { useNavigate } from "react-router-dom";
 import {
@@ -47,7 +47,7 @@ function Home() {
       <div id="home-page">
         <div id="home-page-head">
           <div id="home-page-headtext">
-            <h5>Hello, John Doe !</h5>
+            <h5>Hello, Chimbo !</h5>
           </div>
           <div id="home-page-headuser">
             <div
@@ -71,56 +71,73 @@ function Home() {
             <div id="home-card">
               <div id="home-card-innerbox">
                 <p>Members</p>
-                <FaUsers id="home-card-innerboxicon"/>
+                <FaUsers id="home-card-innerboxicon" />
               </div>
               <div id="home-card-innerbox">
                 <div id="home-innerbox-card">
                   <small>Total Members</small>
                   <p>270</p>
                 </div>
-                <button onClick={() => navigate("/dashboard/members")}>
-                  {" "}
-                  <FaArrowRightLong />
-                </button>
+                <div id="home-innerbox-card">
+                  <small>Date</small>
+                  <p>December 2024</p>
+                </div>
               </div>
+              <Button onClick={() => navigate("/dashboard/members")} type="primary">
+                View more
+              </Button>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-4">
+            <div id="home-card">
+              <div id="home-card-innerbox">
+                <p>Wedding Pledges</p>
+            
+                <TbReportMoney id="home-card-innerboxicon"/>
+              </div>
+              <div id="home-card-innerbox">
+                <div id="home-innerbox-card">
+                  <small>Total Pledges</small>
+                  <p>20</p>
+                </div>
+                <div id="home-innerbox-card">
+                  <small>Progress</small>
+                 <p>
+                 <Flex
+                    vertical
+                    gap="small"
+                    style={{
+                      width: 180,
+                    }}
+                  >
+                    <Progress percent={30} size="large" />
+                  </Flex>
+                 </p>
+                </div>
+              </div>
+              <Button type="primary">View more</Button>
             </div>
           </div>
           <div class="col-lg-4 col-md-4">
             <div id="home-card">
               <div id="home-card-innerbox">
                 <p>Events</p>
-                <MdOutlineEventAvailable  id="home-card-innerboxicon"/>
+                <MdOutlineEventAvailable id="home-card-innerboxicon" />
               </div>
               <div id="home-card-innerbox">
                 <div id="home-innerbox-card">
                   <small>Total Events</small>
                   <p>108</p>
                 </div>
-                <button>
-                  {" "}
-                  <FaArrowRightLong />
-                </button>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-4">
-            <div id="home-card">
-              <div id="home-card-innerbox">
-                <p>Members</p>
-                <FaUsers id="home-card-innerboxicon"/>
-              </div>
-              <div id="home-card-innerbox">
                 <div id="home-innerbox-card">
-                  <small>Total Members</small>
-                  <p>270</p>
+                  <small>Upcoming Event</small>
+                  <p>2days 17hrs Left</p>
                 </div>
-                <button>
-                  {" "}
-                  <FaArrowRightLong />
-                </button>
               </div>
+              <Button type="primary">View more</Button>
             </div>
           </div>
+      
         </div>
       </div>
       <div className="row">
@@ -134,9 +151,24 @@ function Home() {
                 <CartesianGrid strokeDasharray="3 3" />
                 <Tooltip />
                 <Legend />
-                <Line type="monotone" dataKey="Rent" stroke="#8884d8" strokeWidth={2} />
-                <Line type="monotone" dataKey="Pledges" stroke="#82ca9d" strokeWidth={2} />
-                <Line type="monotone" dataKey="Offering" stroke="#FFBB28" strokeWidth={2} />
+                <Line
+                  type="monotone"
+                  dataKey="Rent"
+                  stroke="#8884d8"
+                  strokeWidth={2}
+                />
+                <Line
+                  type="monotone"
+                  dataKey="Pledges"
+                  stroke="#82ca9d"
+                  strokeWidth={2}
+                />
+                <Line
+                  type="monotone"
+                  dataKey="Offering"
+                  stroke="#FFBB28"
+                  strokeWidth={2}
+                />
               </LineChart>
             </ResponsiveContainer>
           </div>
@@ -193,6 +225,15 @@ function Home() {
             </div>
           </div>
         </div>
+      </div>
+      <div>
+        <h5>Latest Updates</h5>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum quasi
+          eligendi sequi facere, eum perferendis, omnis optio doloribus tempora
+          distinctio sint ducimus suscipit quaerat accusantium placeat impedit
+          maiores fugit nulla.
+        </p>
       </div>
     </>
   );

@@ -18,7 +18,7 @@ function Navbar() {
             <GoHome id="navbaricon" onClick={() => navigate("/dashboard")}/>
           </Badge>
         </div>
-        <div id="navbar-page-icon">
+        <div id="navbar-page-icon" onClick={() => navigate("/dashboard/payments")}>
           <TbMoneybag id="navbaricon" />
         </div>
         <div id="navbar-page-icon">
