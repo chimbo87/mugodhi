@@ -65,7 +65,10 @@ function Dashboard() {
               <div id="dashboardSideBarBtnsDiv">
                 <button
                   style={getButtonStyle("events")}
-                  onClick={() => handleButtonClick("events")}
+                  onClick={() => {
+                    handleButtonClick("events");
+                    navigate("/dashboard/events");
+                  }}
                 >
                   <LuCalendarClock id="dashboardSideBarBtnsIcons" /> Events
                 </button>

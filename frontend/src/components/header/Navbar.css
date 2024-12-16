@@ -3,7 +3,7 @@
   display: none;
   align-items: center;
   justify-content: center;
-  padding: 12px 0px;
+  padding: 20px 0px;
   background-color: #fff;
   position: fixed;
   bottom: 0%;
@@ -17,7 +17,7 @@
   justify-content: center;
 }
 #navbar-page-icon{
-  margin: 0px 20px;
+  margin: 0px 16px;
 }
 #navbaricon{
   color: #5d5c5c;

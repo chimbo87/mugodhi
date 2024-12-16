@@ -15,6 +15,9 @@ import Members from "./pages/members/Members";
 import Notifications from "./pages/notices/Notifications";
 import Payments from "./pages/payments/Payments";
 import Profile from "./pages/profile/Profile";
+import Events from "./pages/events/Events";
+import Messaging from "./pages/messaging/Messaging";
+import Chatbox from "./pages/messaging/Chatbox";
 function App() {
   const router = createBrowserRouter(
     createRoutesFromElements(
@@ -28,6 +31,9 @@ function App() {
           <Route path="notifications" element={<Notifications/>} />
           <Route path="payments" element={<Payments/>} />
           <Route path="profile" element={<Profile/>} />
+          <Route path="events" element={<Events/>} />
+          <Route path="messaging" element={<Messaging/>} />
+          <Route path="chats" element={<Chatbox/>} />
         </Route>
       </Route>
     )

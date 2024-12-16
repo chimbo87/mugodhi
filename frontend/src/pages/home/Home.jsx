@@ -2,14 +2,15 @@ import React, { useState } from "react";
 import { IoNotificationsOutline } from "react-icons/io5";
 import userlogo from "../../assets/images/person.jpeg";
 import { MdOutlineEventAvailable } from "react-icons/md";
+import { HiOutlineChatAlt } from "react-icons/hi";
 import { FaUsers } from "react-icons/fa";
 import { TbReportMoney } from "react-icons/tb";
 import { Button, Flex, Progress, Badge } from "antd";
 import "./Home.css";
 import { useNavigate } from "react-router-dom";
 import {
-  LineChart,
-  Line,
+  BarChart,
+  Bar,
   XAxis,
   YAxis,
   CartesianGrid,
@@ -52,10 +53,10 @@ function Home() {
           <div id="home-page-headuser">
             <div
               id="home-page-headiconbox"
-              onClick={() => navigate("/dashboard/notifications")}
+              onClick={() => navigate("/dashboard/messaging")}
             >
-              <Badge count={15}>
-                <IoNotificationsOutline id="home-page-headicon" />
+              <Badge count={4}>
+                <HiOutlineChatAlt  id="home-page-headicon" />
               </Badge>
             </div>
             <img
@@ -143,33 +144,30 @@ function Home() {
       <div className="row">
         <div className="col-lg-8 col-md-4">
           <div id="home-line-chart">
-            <h6>Finances Distribution By Line Chart</h6>
+            <h6>Finances Distribution By Bar Chart</h6>
             <ResponsiveContainer width="100%" height={400}>
-              <LineChart data={lineChartData}>
+              <BarChart data={lineChartData}>
                 <XAxis dataKey="name" />
                 <YAxis type="number" domain={[0, 10000]} />
                 <CartesianGrid strokeDasharray="3 3" />
                 <Tooltip />
                 <Legend />
-                <Line
-                  type="monotone"
+                <Bar
                   dataKey="Rent"
-                  stroke="#8884d8"
+                  fill="#8884d8"
                   strokeWidth={2}
                 />
-                <Line
-                  type="monotone"
+                <Bar
                   dataKey="Pledges"
-                  stroke="#82ca9d"
+                  fill="#82ca9d"
                   strokeWidth={2}
                 />
-                <Line
-                  type="monotone"
+                <Bar
                   dataKey="Offering"
-                  stroke="#FFBB28"
+                  fill="#FFBB28"
                   strokeWidth={2}
                 />
-              </LineChart>
+              </BarChart>
             </ResponsiveContainer>
           </div>
         </div>

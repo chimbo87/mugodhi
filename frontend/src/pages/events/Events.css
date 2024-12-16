@@ -1,0 +1,37 @@
+#event-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0px;
+}
+
+#event-card{
+    border: 1px solid gainsboro;
+    box-shadow: 2px 1px 18px gainsboro;
+    padding: 4px;
+    border-radius: 4px;
+    margin-top: 15px;
+}
+#event-card-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#event-card-header h6{
+    font-weight: 700;
+    color: #808080;
+
+}
+#event-card-headericon{
+    font-weight: 700;
+    color: #808080;
+    font-size: 25px;
+}
+#event-card-summary{
+    margin: 5px 0px;
+}
+#event-card-texts{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
