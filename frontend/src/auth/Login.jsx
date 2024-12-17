@@ -24,17 +24,21 @@ function Login() {
           </div>
           <div id="login-card-formwrap">
             <label>Email</label>
-            <Input size="large" />
+            <div id="login-card-formwrap-wrap">
+              <Input size="large" />
+            </div>
           </div>
           <div id="login-card-formwrap">
             <label>Password</label>
 
-            <Input.Password
-              size="large"
-              iconRender={(visible) =>
-                visible ? <EyeOutlined /> : <EyeInvisibleOutlined />
-              }
-            />
+            <div id="login-card-formwrap-wrap">
+              <Input.Password
+                size="large"
+                iconRender={(visible) =>
+                  visible ? <EyeOutlined /> : <EyeInvisibleOutlined />
+                }
+              />
+            </div>
           </div>
           <div id="login-card-formwrap">
             <Checkbox onChange={onChange}>Remember me</Checkbox>

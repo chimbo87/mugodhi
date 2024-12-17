@@ -1,7 +1,6 @@
 import React from "react";
-import { Button, Segmented, Tabs } from "antd";
-import { AntDesignOutlined, UserOutlined } from '@ant-design/icons';
-import { Avatar, Divider, Tooltip } from 'antd';
+import { Button,Tabs } from "antd";
+import { GoArrowLeft } from "react-icons/go";
 import Rent from "../records/rent/Rent";
 import Pledges from "../records/pledges/Pledges";
 
@@ -64,7 +63,7 @@ function Payments() {
   const [alignValue, setAlignValue] = React.useState("center");
   return (
     <div>
-      <small>Finances</small>
+      <small><GoArrowLeft /> Finances</small>
 
       <Tabs
         defaultActiveKey="1"
