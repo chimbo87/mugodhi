@@ -78,9 +78,7 @@ function Dashboard() {
                 <Collapse ghost>
                   <Panel
                     header={
-                      <button
-                      id="records-btn-colapse"
-                      >
+                      <button id="records-btn-colapse">
                         <span>Financial Records</span>
                       </button>
                     }
@@ -90,21 +88,30 @@ function Dashboard() {
                       <button
                         className="nested-btn"
                         style={getButtonStyle("rentPayments")}
-                        onClick={() => handleButtonClick("rentPayments")}
+                        onClick={() => {
+                          handleButtonClick("rentPayments");
+                          navigate("/dashboard/rent");
+                        }}
                       >
                         Rent Payments
                       </button>
                       <button
                         className="nested-btn"
                         style={getButtonStyle("offerings")}
-                        onClick={() => handleButtonClick("offerings")}
+                        onClick={() => {
+                          handleButtonClick("offerings");
+                          navigate("/dashboard/offerings");
+                        }}
                       >
                         Offerings
                       </button>
                       <button
                         className="nested-btn"
                         style={getButtonStyle("pledges")}
-                        onClick={() => handleButtonClick("pledges")}
+                        onClick={() => {
+                          handleButtonClick("pledges");
+                          navigate("/dashboard/pledges");
+                        }}
                       >
                         Pledges
                       </button>
@@ -127,9 +134,7 @@ function Dashboard() {
                 <Collapse ghost>
                   <Panel
                     header={
-                      <button
-                        id="records-btn-colapse"
-                      >
+                      <button id="records-btn-colapse">
                         <span>Church Records</span>
                       </button>
                     }
@@ -141,28 +146,28 @@ function Dashboard() {
                         style={getButtonStyle("prophecy")}
                         onClick={() => handleButtonClick("prophecy")}
                       >
-                      Prophecy Records
+                        Prophecy Records
                       </button>
                       <button
                         className="nested-btn"
                         style={getButtonStyle("displinary")}
                         onClick={() => handleButtonClick("displinary")}
                       >
-                      Displinary Records
+                        Displinary Records
                       </button>
                       <button
                         className="nested-btn"
                         style={getButtonStyle("babtism")}
                         onClick={() => handleButtonClick("babtism")}
                       >
-                       Babtism Records
+                        Babtism Records
                       </button>
                       <button
                         className="nested-btn"
                         style={getButtonStyle("meeting")}
                         onClick={() => handleButtonClick("meeting")}
                       >
-                       Meeting Records
+                        Meeting Records
                       </button>
                     </div>
                   </Panel>

@@ -18,6 +18,9 @@ import Profile from "./pages/profile/Profile";
 import Events from "./pages/events/Events";
 import Messaging from "./pages/messaging/Messaging";
 import Chatbox from "./pages/messaging/Chatbox";
+import Rent from "./pages/records/rent/Rent";
+import Offering from "./pages/records/offerings/Offering";
+import Pledges from "./pages/records/pledges/Pledges";
 function App() {
   const router = createBrowserRouter(
     createRoutesFromElements(
@@ -34,6 +37,9 @@ function App() {
           <Route path="events" element={<Events/>} />
           <Route path="messaging" element={<Messaging/>} />
           <Route path="chats" element={<Chatbox/>} />
+          <Route path="rent" element={<Rent/>} />
+          <Route path="offerings" element={<Offering/>} />
+          <Route path="pledges" element={<Pledges/>} />
         </Route>
       </Route>
     )

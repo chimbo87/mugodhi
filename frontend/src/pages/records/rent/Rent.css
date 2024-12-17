@@ -1,0 +1,43 @@
+
+
+#rent-card-wrap{
+    border: 1px solid #dcdcdc;
+    padding: 5px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+#rent-card-wrap h6{
+    color: #3d3b3b;
+    font-weight: 700;
+    font-family: "Raleway", sans-serif;
+}
+#rent-card-head{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#rent-card-middle{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#rent-card-middle p{
+    font-family: "Raleway", sans-serif;
+    font-weight: 700;
+}
+#rent-card-middle-percentup{
+    color: #008000;
+    font-family: "Raleway", sans-serif;
+}
+#rent-card-middle-percent{
+    color: #ff0000;
+    font-family: "Raleway", sans-serif;
+}
+#rent-card-bottom{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}

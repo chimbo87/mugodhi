@@ -1,13 +1,18 @@
 import React from "react";
-import userlogo from "../../assets/images/person.jpeg";
+import Memberstable from "../../components/membersbox/Memberstable";
 import { LuSearch } from "react-icons/lu";
 import { GoArrowLeft } from "react-icons/go";
 import { IoIosArrowForward } from "react-icons/io";
-import "./Members.css";
+import './Members.css'
 
 function Members() {
   return (
-    <div>
+    <>
+      <div id="membersTable">
+        <Memberstable />
+      </div>
+
+      <div id="membersmobile">
       <div id="members-head">
         <small
           style={{
@@ -53,7 +58,7 @@ function Members() {
         <div class="col-lg-4 col-md-4">
           <div id="member-usercard-box">
             <div id="member-usercard">
-            <img
+              <img
                 src={"https://avatar.iran.liara.run/public/boy"}
                 alt="Profile"
               />
@@ -89,7 +94,7 @@ function Members() {
         <div class="col-lg-4 col-md-4">
           <div id="member-usercard-box">
             <div id="member-usercard">
-            <img
+              <img
                 src={"https://avatar.iran.liara.run/public/girl"}
                 alt="Profile"
               />
@@ -106,7 +111,7 @@ function Members() {
         <div class="col-lg-4 col-md-4">
           <div id="member-usercard-box">
             <div id="member-usercard">
-            <img
+              <img
                 src={"https://avatar.iran.liara.run/public/boy"}
                 alt="Profile"
               />
@@ -123,7 +128,7 @@ function Members() {
         <div class="col-lg-4 col-md-4">
           <div id="member-usercard-box">
             <div id="member-usercard">
-            <img
+              <img
                 src={"https://avatar.iran.liara.run/public/girl"}
                 alt="Profile"
               />
@@ -140,7 +145,7 @@ function Members() {
         <div class="col-lg-4 col-md-4">
           <div id="member-usercard-box">
             <div id="member-usercard">
-            <img
+              <img
                 src={"https://avatar.iran.liara.run/public/girl"}
                 alt="Profile"
               />
@@ -157,7 +162,7 @@ function Members() {
         <div class="col-lg-4 col-md-4">
           <div id="member-usercard-box">
             <div id="member-usercard">
-            <img
+              <img
                 src={"https://avatar.iran.liara.run/public/boy"}
                 alt="Profile"
               />
@@ -174,7 +179,7 @@ function Members() {
         <div class="col-lg-4 col-md-4">
           <div id="member-usercard-box">
             <div id="member-usercard">
-            <img
+              <img
                 src={"https://avatar.iran.liara.run/public/girl"}
                 alt="Profile"
               />
@@ -190,6 +195,7 @@ function Members() {
         </div>
       </div>
     </div>
+    </>
   );
 }
 

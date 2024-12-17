@@ -2,6 +2,8 @@ import React from "react";
 import { Button, Segmented, Tabs } from "antd";
 import { AntDesignOutlined, UserOutlined } from '@ant-design/icons';
 import { Avatar, Divider, Tooltip } from 'antd';
+import Rent from "../records/rent/Rent";
+import Pledges from "../records/pledges/Pledges";
 
 const onChange = (key) => {
   console.log(key);
@@ -16,17 +18,7 @@ const items = [
     ),
     children: (
       <div>
-       <div> <h6>November 2024</h6> <h6>R3700</h6></div>
-       <Avatar src="https://api.dicebear.com/7.x/miniavs/svg?seed=1" />
-      <a href="https://ant.design">
-        <Avatar
-          style={{
-            backgroundColor: '#f56a00',
-          }}
-        >
-          K
-        </Avatar>
-      </a>
+    <Rent/>
       </div>
     ),
   },
@@ -39,17 +31,7 @@ const items = [
     ),
     children: (
       <div>
-        <h6>Pledges</h6>
-        <p>
-          {" "}
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, illum
-          asperiores, incidunt dolorem natus ipsa ut voluptates delectus quae
-          minima, eveniet sit? Error unde recusandae quod, perspiciatis adipisci
-          fugiat consequatur? Lorem ipsum dolor sit amet consectetur,
-          adipisicing elit. Nulla, illum asperiores, incidunt dolorem natus ipsa
-          ut voluptates delectus quae minima, eveniet sit? Error unde recusandae
-          quod, perspiciatis adipisci fugiat consequatur?
-        </p>
+       <Pledges/>
       </div>
     ),
   },
