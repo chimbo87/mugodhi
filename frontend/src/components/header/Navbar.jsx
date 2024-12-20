@@ -37,7 +37,7 @@ function Navbar() {
             onClick={() => navigate("/dashboard/members")}
           />
         </div>
-        <div id="navbar-page-icon">
+        <div id="navbar-page-icon" onClick={() => navigate("/dashboard/records")}>
           <HiOutlineClipboardDocumentList id="navbaricon" />
         </div>
         <div id="navbar-page-icon"   onClick={() => navigate("/dashboard/notifications")}>
