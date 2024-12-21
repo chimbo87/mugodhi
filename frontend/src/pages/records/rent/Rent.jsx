@@ -1,6 +1,7 @@
 import React from "react";
 import "./Rent.css";
 import { AntDesignOutlined, UserOutlined } from "@ant-design/icons";
+import { useNavigate } from "react-router-dom";
 import { Avatar, Divider, Tooltip } from "antd";
 import { FaMoneyCheckAlt } from "react-icons/fa";
 import { TiArrowSortedUp } from "react-icons/ti";
@@ -8,6 +9,7 @@ import { TiArrowSortedDown } from "react-icons/ti";
 import { Button } from "antd";
 
 function Rent() {
+  const navigate = useNavigate();
   return (
     <div>
       <div class="row">
@@ -55,7 +57,7 @@ function Rent() {
                 </Avatar.Group>
               </div>
               <div>
-                <Button>View more</Button>
+                <Button onClick={() => navigate("/dashboard/rentdetails")} >View more</Button>
               </div>
             </div>
           </div>
