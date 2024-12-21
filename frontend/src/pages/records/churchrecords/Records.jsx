@@ -1,5 +1,6 @@
 import React from "react";
 import { Button, Tabs } from "antd";
+import './Records.css';
 const onChange = (key) => {
   console.log(key);
 };
@@ -49,26 +50,11 @@ const items = [
       </div>
     ),
   },
-//   {
-//     key: "4",
-//     label: (<Button>Desplinary</Button>),
-//     children: (
-//       <div>
-//         <p>Desplinary Records</p>
-//         <p>
-//           Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo qui
-//           nulla minima assumenda ab labore voluptatem alias adipisci dolores
-//           asperiores impedit odit dolorem placeat, officia suscipit aut expedita
-//           amet nostrum?
-//         </p>
-//       </div>
-//     ),
-//   },
+
 ];
 function Records() {
   return (
-    <div>
-      <h6>Church Records</h6>
+    <div id="records-btns">
       <Tabs defaultActiveKey="1" items={items} onChange={onChange} />
     </div>
   );

@@ -18,33 +18,40 @@ function Navbar() {
           <Badge dot>
             <GoHome id="navbaricon" onClick={() => navigate("/dashboard")} />
           </Badge>
+          <small>Home</small>
         </div>
         <div
           id="navbar-page-icon"
           onClick={() => navigate("/dashboard/payments")}
         >
           <TbMoneybag id="navbaricon" />
+          <small>Finance</small>
         </div>
         <div
           id="navbar-page-icon"
           onClick={() => navigate("/dashboard/events")}
         >
           <LuCalendarClock id="navbaricon" />
+          <small>Events</small>
         </div>
         <div id="navbar-page-icon">
           <PiUsersThree
             id="navbaricon"
             onClick={() => navigate("/dashboard/members")}
           />
+             <small>Members</small>
         </div>
         <div id="navbar-page-icon" onClick={() => navigate("/dashboard/records")}>
           <HiOutlineClipboardDocumentList id="navbaricon" />
+          <small>Records</small>
         </div>
         <div id="navbar-page-icon"   onClick={() => navigate("/dashboard/notifications")}>
           <Badge count={12}>
             {" "}
             <IoNotificationsOutline id="navbaricon" />
+
           </Badge>
+          <small>Notifications</small>
         </div>
       </div>
     </div>
