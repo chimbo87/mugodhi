@@ -1,40 +1,8 @@
-#members-head{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-#members-head-search{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 30%;
-}
-#member-usercard-box{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border: 1px solid #dcdcdc70;
-    margin-top: 10px;
-}
-#member-usercard {
+#membersHeadTable {
   display: flex;
   align-items: center;
-  justify-content: start;
-
-  padding: 5px;
-}
-#member-usercard img {
-  width: 60px;
-  height: 60px;
-  object-fit: cover;
-  border-radius: 50%;
-}
-#member-usercard-details{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    justify-content: center;
-    margin-left: 10px;
+  justify-content: space-between;
+background-color: #dcdcdc81;
+border-radius: 4px;
+  padding: 10px 8px;
 }

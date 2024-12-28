@@ -24,6 +24,7 @@ import Pledges from "./pages/records/pledges/Pledges";
 import Records from "./pages/records/churchrecords/Records";
 import Rentdetails from "./pages/records/rent/Rentdetails";
 import Rentreciept from "./pages/records/rent/Rentreciept";
+import MemberDetails from "./pages/members/MemberDetails";
 function App() {
   const router = createBrowserRouter(
     createRoutesFromElements(
@@ -34,6 +35,7 @@ function App() {
           <Route index element={<Home/>} />
           <Route path="home" element={<Home/>} />
           <Route path="members" element={<Members/>} />
+          <Route path="member-details" element={<MemberDetails/>} />
           <Route path="notifications" element={<Notifications/>} />
           <Route path="payments" element={<Payments/>} />
           <Route path="profile" element={<Profile/>} />

@@ -45,11 +45,92 @@ border-radius: 50%;
   justify-content: center;
   margin-left: 10px;
 }
+#memberDetailsContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 80px;
+}
+#memberDetailsBox{
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  border: 1px solid #dcdcdc;
+   max-width: 800px;
+   padding: 10px;
+ }
+#memberDetailsBox-Head{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  border: 1px solid gainsboro;
+  background-color: #dcdcdc;
+  padding: 40px 0px;
+  margin-bottom: 8px;
+}
+#memberDetailsBox-Icon{
+  font-size: 80px;
+  color: #00c3ff;
+}
+#memberDetailsBox-Head h6{
+  color: #00a6ff;
+  font-weight: 700;
+  font-size: 16px;
+  margin-top: 5px;
+  font-family: "Raleway", sans-serif;
+}
+#memberDetailsCard{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#memberDetailsCard p{
+  color: #5e5c5c;
+}
+#memberDetailsCard-name{
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+#memberDetailSummary{
+  color: #5e5c5c;
+}
+#addMemberBtn{
+  display: none;
+  position: fixed;
+  bottom: 15%;
+  right: 4%;
+}
 @media (max-width: 700px) {
   #membersmobile{
     display: block;
   }
   #membersTable{
     display: none;
+  }
+  #memberDetailsBox{
+    box-shadow: 0 0 0px rgba(0,0,0,0.1);
+    border: 0px solid #dcdcdc;
+     max-width: 800px;
+     padding: 0px;
+   }
+   #memberDetailsBox-Head{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    border: 1px solid gainsboro;
+    background-color: #dcdcdc;
+    padding: 20px 0px;
+    margin-bottom: 8px;
+  }
+  #addMemberBtn{
+    display: block;
+    position: fixed;
+    bottom: 15%;
+    right: 4%;
   }
 }
