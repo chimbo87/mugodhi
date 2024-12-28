@@ -57,7 +57,7 @@ function Rent() {
                 </Avatar.Group>
               </div>
               <div>
-                <Button onClick={() => navigate("/dashboard/rentdetails")} >View more</Button>
+                <Button onClick={() => navigate("/dashboard/rent-details")} >View more</Button>
               </div>
             </div>
           </div>

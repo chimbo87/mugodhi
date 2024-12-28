@@ -41,8 +41,8 @@ function App() {
           <Route path="messaging" element={<Messaging/>} />
           <Route path="chats" element={<Chatbox/>} />
           <Route path="rent" element={<Rent/>} />
-          <Route path="rentdetails" element={<Rentdetails/>} />
-          <Route path="rentreciept" element={<Rentreciept/>} />
+          <Route path="rent-details" element={<Rentdetails/>} />
+          <Route path="rent-reciept" element={<Rentreciept/>} />
           <Route path="offerings" element={<Offering/>} />
           <Route path="pledges" element={<Pledges/>} />
           <Route path="records" element={<Records/>} />

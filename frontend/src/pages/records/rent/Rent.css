@@ -44,15 +44,15 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border: 1px solid #dcdcdc;
+  /* border: 1px solid #dcdcdc; */
   padding: 10px;
-  background-color: gainsboro;
+  background-color: #dcdcdc58;
   border-radius: 4px;
 }
 #rent-details-logo{
     display: flex;
     align-items: center;
-    border: 1px solid rgb(137, 134, 134);
+   
     justify-content: end;
 }
 #rent-details-logo img{
@@ -97,6 +97,7 @@ td {
     top: 20px;
     right: 20px;
     font-weight: bold;
+    font-family: "Raleway", sans-serif;
   }
   
   .header {
@@ -117,14 +118,17 @@ td {
     font-size: 24px;
     font-weight: bold;
     margin: 10px 0;
+    color: #00c3ff;
   }
   
   .church-details {
     font-size: 14px;
+    color: #00aeff;
   }
   
   .receipt-heading {
     text-align: center;
+    font-family: "Raleway", sans-serif;
   }
   
   .main-content {
@@ -166,6 +170,7 @@ td {
     text-align: right;
     font-size: 20px;
     font-weight: bold;
+    font-family: "Raleway", sans-serif;
   }
   
   .amount-words {
@@ -173,18 +178,27 @@ td {
   }
   
   .footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     margin-top: 40px;
-    border-top: 1px solid #ddd;
+    border-top: 1px solid #ece8e8;
     padding-top: 20px;
   }
   
   .signature-block {
     float: left;
     width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   
   .signature-block.right {
     float: right;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   
   .signature-line {
@@ -193,6 +207,7 @@ td {
     width: 200px;
     text-align: center;
     padding-top: 5px;
+    color: #00aeff;
   }
   
   .clearfix {

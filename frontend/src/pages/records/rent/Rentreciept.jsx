@@ -1,4 +1,7 @@
 import React from "react";
+import logo from "../../../assets/images/logo.png";
+import { PrinterOutlined } from "@ant-design/icons";
+import { Button} from "antd";
 
 function Rentreciept() {
   return (
@@ -7,12 +10,12 @@ function Rentreciept() {
         <div className="receipt-number">Receipt #: 2024001</div>
         
         <div className="header">
-          <img src="/api/placeholder/100/100" alt="Church Logo" className="church-logo" />
-          <div className="receipt-title">GRACE COMMUNITY CHURCH</div>
+          <img src={logo} alt="Church Logo" className="church-logo" />
+          <div className="receipt-title">AFC JOHANNESBURG BRANCH</div>
           <div className="church-details">
-            123 Faith Street, Blessed City<br />
-            Tel: (012) 345-6789<br />
-            Email: finance@gracechurch.org
+            130 Turffontein Road, Trojan Turffontein<br />
+            Tel: +2773 054 6798<br />
+            Email: afcjohannesburg@gmail.com
           </div>
         </div>
 
@@ -76,12 +79,20 @@ function Rentreciept() {
 
         <div className="thank-you">
           <p>Thank you for your contribution. May God bless you abundantly!</p>
-          <p className="official-note">This is an official receipt of Grace Community Church</p>
+          <p className="official-note">This is an official receipt of  <b>Afc Johannesburg Branch Church</b></p>
         </div>
       </div>
 
       <div className="print-button">
-        <button onClick={() => window.print()}>Print Receipt</button>
+        {/* <button onClick={() => window.print()}>Print Receipt</button> */}
+        <Button 
+          type="primary"
+          icon={<PrinterOutlined />}
+          onClick={() => window.print()}
+          style={{ backgroundColor: '#00a6ff' }}
+        >
+          Print Receipt
+        </Button>
       </div>
     </div>
   );
