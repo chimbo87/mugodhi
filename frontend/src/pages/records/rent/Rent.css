@@ -81,7 +81,6 @@ td {
 .receipt-wrapper {
     max-width: 800px;
     margin: 20px auto;
-    padding: 20px;
   }
   
   .receipt-container {
@@ -139,6 +138,7 @@ td {
     width: 100%;
     border-collapse: collapse;
     margin: 20px 0;
+
   }
   
   .payment-details td {
@@ -204,7 +204,6 @@ td {
   .signature-line {
     margin-top: 30px;
     border-top: 1px solid #000;
-    width: 200px;
     text-align: center;
     padding-top: 5px;
     color: #00aeff;
@@ -235,19 +234,27 @@ td {
   }
   
   @media print {
-    .receipt-wrapper {
-      margin: 0;
-      padding: 0;
-    }
+  
     
-    .receipt-container {
-      box-shadow: none;
-      border: none;
-    }
+    
     
     .print-button {
       display: none;
     }
   }
+  @media (max-width: 700px) {
+    .receipt-container {
+      box-shadow: none;
+      border: 2px solid gray;
+      padding: 5px;
+      position: relative;
+      background: #fff;
 
+    }
+    .receipt-wrapper {
+      margin-bottom: 80px;
+      padding: 0;
+    }
+    
+  }
   

@@ -171,7 +171,7 @@ function Rentdetails() {
   ];
 
   return (
-    <div style={{ maxWidth: '92vw', overflowX: 'hidden' }}>
+    <div style={{ maxWidth: '92vw', overflowX: 'hidden',marginBottom:"70px" }}>
       <div className="row">
         <div className="col-lg-12 col-md-4">
           <div id="rent-details-card" style={{ margin: '10px', padding: '15px' }}>

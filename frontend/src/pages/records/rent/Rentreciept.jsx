@@ -1,20 +1,23 @@
 import React from "react";
 import logo from "../../../assets/images/logo.png";
 import { PrinterOutlined } from "@ant-design/icons";
-import { Button} from "antd";
+import { Button } from "antd";
+
 
 function Rentreciept() {
   return (
     <div className="receipt-wrapper">
       <div className="receipt-container">
         <div className="receipt-number">Receipt #: 2024001</div>
-        
+
         <div className="header">
           <img src={logo} alt="Church Logo" className="church-logo" />
           <div className="receipt-title">AFC JOHANNESBURG BRANCH</div>
           <div className="church-details">
-            130 Turffontein Road, Trojan Turffontein<br />
-            Tel: +2773 054 6798<br />
+            130 Turffontein Road, Trojan Turffontein
+            <br />
+            Tel: +2773 054 6798
+            <br />
             Email: afcjohannesburg@gmail.com
           </div>
         </div>
@@ -65,31 +68,29 @@ function Rentreciept() {
 
         <div className="footer">
           <div className="signature-block">
-            <div className="signature-line">
-              Authorized Signature
-            </div>
+            <div className="signature-line">Authorized Signature</div>
           </div>
           <div className="signature-block right">
-            <div className="signature-line">
-              Recipient Signature
-            </div>
+            <div className="signature-line">Recipient Signature</div>
           </div>
           <div className="clearfix"></div>
         </div>
 
         <div className="thank-you">
           <p>Thank you for your contribution. May God bless you abundantly!</p>
-          <p className="official-note">This is an official receipt of  <b>Afc Johannesburg Branch Church</b></p>
+          <p className="official-note">
+            This is an official receipt of <b>Afc Johannesburg Branch Church</b>
+          </p>
         </div>
       </div>
 
       <div className="print-button">
         {/* <button onClick={() => window.print()}>Print Receipt</button> */}
-        <Button 
+        <Button
           type="primary"
           icon={<PrinterOutlined />}
           onClick={() => window.print()}
-          style={{ backgroundColor: '#00a6ff' }}
+          style={{ backgroundColor: "#00a6ff" }}
         >
           Print Receipt
         </Button>
