@@ -171,7 +171,7 @@ function Rentdetails() {
   ];
 
   return (
-    <div style={{ maxWidth: '92vw', overflowX: 'hidden',marginBottom:"70px" }}>
+    <div style={{ maxWidth: '92vw', overflowX: 'hidden',marginBottom:"10px" }}>
       <div className="row">
         <div className="col-lg-12 col-md-4">
           <div id="rent-details-card" style={{ margin: '10px', padding: '15px' }}>
@@ -205,7 +205,7 @@ function Rentdetails() {
           style={{ minWidth: '700px' }}
         />
       </div>
-      <div style={{ textAlign: 'right', margin: '20px' }}>
+      <div style={{ textAlign: 'right',marginTop:"10px" }}>
         <Button 
           type="primary"
           icon={<PrinterOutlined />}

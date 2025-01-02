@@ -1,23 +1,22 @@
-
-#membersTable{
+#membersTable {
   display: block;
 }
-#membersmobile{
+#membersmobile {
   display: none;
 }
-#members-head{
+#members-head {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-#members-head-search{
+#members-head-search {
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 30%;
 }
-#member-usercard-box{
+#member-usercard-box {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -25,19 +24,19 @@
   margin-top: 10px;
 }
 #member-usercard {
-display: flex;
-align-items: center;
-justify-content: start;
+  display: flex;
+  align-items: center;
+  justify-content: start;
 
-padding: 5px;
+  padding: 5px;
 }
 #member-usercard img {
-width: 60px;
-height: 60px;
-object-fit: cover;
-border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 50%;
 }
-#member-usercard-details{
+#member-usercard-details {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -45,20 +44,20 @@ border-radius: 50%;
   justify-content: center;
   margin-left: 10px;
 }
-#memberDetailsContainer{
+#memberDetailsContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   margin-bottom: 80px;
 }
-#memberDetailsBox{
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+#memberDetailsBox {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border: 1px solid #dcdcdc;
-   max-width: 800px;
-   padding: 10px;
- }
-#memberDetailsBox-Head{
+  max-width: 800px;
+  padding: 10px;
+}
+#memberDetailsBox-Head {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -69,54 +68,54 @@ border-radius: 50%;
   padding: 40px 0px;
   margin-bottom: 8px;
 }
-#memberDetailsBox-Icon{
+#memberDetailsBox-Icon {
   font-size: 80px;
   color: #00c3ff;
 }
-#memberDetailsBox-Head h6{
+#memberDetailsBox-Head h6 {
   color: #00a6ff;
   font-weight: 700;
   font-size: 16px;
   margin-top: 5px;
   font-family: "Raleway", sans-serif;
 }
-#memberDetailsCard{
+#memberDetailsCard {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-#memberDetailsCard p{
+#memberDetailsCard p {
   color: #5e5c5c;
 }
-#memberDetailsCard-name{
+#memberDetailsCard-name {
   width: 50%;
   display: flex;
   align-items: center;
   justify-content: start;
 }
-#memberDetailSummary{
+#memberDetailSummary {
   color: #5e5c5c;
 }
-#addMemberBtn{
+#addMemberBtn {
   display: none;
   position: fixed;
   bottom: 15%;
   right: 4%;
 }
 @media (max-width: 700px) {
-  #membersmobile{
+  #membersmobile {
     display: block;
   }
-  #membersTable{
+  #membersTable {
     display: none;
   }
-  #memberDetailsBox{
-    box-shadow: 0 0 0px rgba(0,0,0,0.1);
+  #memberDetailsBox {
+    box-shadow: 0 0 0px rgba(0, 0, 0, 0.1);
     border: 0px solid #dcdcdc;
-     max-width: 800px;
-     padding: 0px;
-   }
-   #memberDetailsBox-Head{
+    max-width: 800px;
+    padding: 0px;
+  }
+  #memberDetailsBox-Head {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -127,7 +126,7 @@ border-radius: 50%;
     padding: 20px 0px;
     margin-bottom: 8px;
   }
-  #addMemberBtn{
+  #addMemberBtn {
     display: block;
     position: fixed;
     bottom: 15%;

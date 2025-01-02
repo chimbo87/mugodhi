@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { GoHome } from "react-icons/go";
 import { TbMoneybag } from "react-icons/tb";
 import { HiOutlineClipboardDocumentList } from "react-icons/hi2";
@@ -11,8 +11,30 @@ import "./Navbar.css";
 
 function Navbar() {
   const navigate = useNavigate();
+  const [show, setShow] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  const controlNavbar = () => {
+    if (window.scrollY > lastScrollY) {
+      setShow(false); // Hide when scrolling down
+    } else {
+      setShow(true); // Show when scrolling up
+    }
+    setLastScrollY(window.scrollY);
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', controlNavbar);
+    return () => {
+      window.removeEventListener('scroll', controlNavbar);
+    };
+  }, [lastScrollY]);
+
   return (
-    <div id="navbar-page">
+    <div id="navbar-page" style={{ 
+      transform: show ? 'translateY(0)' : 'translateY(100%)',
+      transition: 'transform 0.3s ease-in-out'
+    }}>
       <div id="navbar-page-box">
         <div id="navbar-page-icon">
           <Badge dot>
@@ -39,17 +61,16 @@ function Navbar() {
             id="navbaricon"
             onClick={() => navigate("/dashboard/members")}
           />
-             <small>Members</small>
+          <small>Members</small>
         </div>
         <div id="navbar-page-icon" onClick={() => navigate("/dashboard/records")}>
           <HiOutlineClipboardDocumentList id="navbaricon" />
           <small>Records</small>
         </div>
-        <div id="navbar-page-icon"   onClick={() => navigate("/dashboard/notifications")}>
+        <div id="navbar-page-icon" onClick={() => navigate("/dashboard/notifications")}>
           <Badge count={12}>
             {" "}
             <IoNotificationsOutline id="navbaricon" />
-
           </Badge>
           <small>Notifications</small>
         </div>
