@@ -14,7 +14,7 @@ function Login() {
 
     // Check if the credentials match the provided ones
     if (email === "chimbo@gmail.com" && password === "123456") {
-      message.success("Login successful!");
+      message.success("Login successful 👋!");
       navigate("/dashboard");
     } else {
       message.error("Invalid email or password.");
