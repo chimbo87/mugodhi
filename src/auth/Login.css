@@ -1,132 +1,77 @@
-#login-page{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+#login-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
-#login-card{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100vh;
+#login-page-box {
+  width: 500px;
+  position: absolute;
+  padding: 40px 20px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 4px 8px rgba(141, 140, 140, 0.1), 0 -4px 8px rgba(105, 104, 104, 0.1),
+    4px 0 8px rgba(125, 124, 124, 0.1), -4px 0 8px rgba(123, 122, 122, 0.1);
+  border-radius: 5px;
 }
-#login-img-card{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100vh;
+#login-page-logo {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-#login-img-card img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+#login-page-logo img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
 }
-#login-card-form{
-    width: 480px;
-    padding: 20px 10px;
-    box-shadow: 2px 1px 10px #b1b0b0;
-    border-radius: 5px;
+#login-form {
+  width: 100%;
 }
-#login-card-formwrap{
+#rtys-box{
+    margin-top: 15px;
     display: flex;
     flex-direction: column;
-    align-items: start;
-    justify-content: center;
-    margin-top: 15px;
-
-}
-#login-card-formlogo{
-    display: flex;
     align-items: center;
     justify-content: center;
 }
-#login-card-formwrap label{
- color: #b1b0b0;
- font-size: 14px;
-}
-#login-card-formwrap-wrap{
-  
-    width: 100%;
-    height: 50px;
-}
-#login-card-formwrap input{
-    width: 100%;
-    height: 100%;
-    padding: 6px 2px;
-    border-radius: 8px;
-}
-#forgetpsswd-link{
- color: #b1b0b0;
- font-size: 14px;
- cursor: pointer;
-
-}
-#forgetpsswd-link:hover{
-    color: #00a6ff;
-}
-#login-card-formlogo img{
-width: 150px;
-height: 150px;
-object-fit: contain;
-}
-#login-card-formbtn{
-    margin-top: 15px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-#login-card-formbtn button{
-    width: 100%;
-    padding: 10px 0px;
-    border: none;
-    border-radius: 8px;
-    background-color: #00a6ff;
-    color: #fff;
-}
-#login-card-formbtn button:hover{
-    opacity: 0.8;
-}
-#login-card-formrights{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-#login-card-formrights small{
-    color: #00a6ff;
-}
-@media (max-width: 1000px) {
-    #login-card-form{
-        width: 400px;
-        padding: 20px 10px;
-        box-shadow: 2px 1px 10px #b1b0b0;
+@media (max-width: 550px) {
+    #login-page-box {
+        width: 360px;
+        position: absolute;
+        padding: 40px 20px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        box-shadow: 0 4px 8px rgba(141, 140, 140, 0.1), 0 -4px 8px rgba(105, 104, 104, 0.1),
+          4px 0 8px rgba(125, 124, 124, 0.1), -4px 0 8px rgba(123, 122, 122, 0.1);
         border-radius: 5px;
-    
-    }
+      }
 }
-@media (max-width: 800px) {
-    #login-img-card{
-        display: none;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        height: 100vh;
-    }
-}
-@media (max-width: 450px) {
-    #login-card-form{
-        width: 350px;
-        padding: 20px 0px;
-        box-shadow: 0px 0px 0px #b1b0b0;
+
+@media (max-width: 400px) {
+    #login-page-box {
+        width: 360px;
+        position: absolute;
+        padding: 40px 10px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        box-shadow:none;
         border-radius: 5px;
-    }
-    #login-card-formbtn button{
-        width: 100%;
-        padding: 12px 0px;
-        border: none;
-        border-radius: 4px;
-        font-size: 18px;
-        background-color: #00a6ff;
-        color: #fff;
-    }
+      }
+}
+@media (max-width: 380px) {
+    #login-page-box {
+        width: 340px;
+        position: absolute;
+        padding: 40px 10px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        box-shadow:none;
+        border-radius: 5px;
+    overflow-x: hidden;
+      }
 }
