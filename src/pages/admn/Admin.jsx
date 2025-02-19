@@ -72,10 +72,10 @@ function Admin() {
             </div>
             <div id="admnSideBarBtnsDiv">
               <button
-                style={getButtonStyle("orders")}
+                style={getButtonStyle("church-secretaries")}
                 onClick={() => {
-                  handleButtonClick("orders");
-                  navigate("/admnistration/orders");
+                  handleButtonClick("church-secretaries");
+                  navigate("/admnistration/church-secretaries");
                 }}
               >
                 <GoGift id="dashboardSideBarBtnsIcons" />
