@@ -1,0 +1,344 @@
+.financial-records {
+    padding: 24px;
+    background: #f0f2f5;
+    min-height: 100vh;
+  }
+  
+  .financial-records .financial-header {
+    margin-bottom: 24px;
+  }
+  
+  .financial-records .financial-header h2 {
+    color: #1890ff;
+    margin: 0;
+  }
+  
+  .financial-records .financial-tabs {
+    background: #fff;
+    padding: 16px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px #0000000f;
+  }
+  #rent-payment-list{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 0px;
+    background-color: #0000000f;
+    padding: 10px;
+    box-shadow: 0 2px 8px #0000000f;
+  }
+  /* Rent Cards Styling */
+  .financial-records .rent-card {
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 8px;
+  }
+  
+  .financial-records .rent-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .financial-records .rent-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+  
+  .financial-records .rent-card-header .anticon {
+    color: #1890ff;
+  }
+  
+  .financial-records .rent-progress {
+    margin: 16px 0;
+  }
+  
+  .financial-records .rent-card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 16px;
+  }
+  
+  .financial-records .ant-avatar-group {
+    display: flex;
+  }
+  
+  /* Pledges & Offerings Tables Styling */
+  .financial-records .pledges-card,
+  .financial-records .offerings-card {
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  }
+  
+  .financial-records .ant-table-thead > tr > th {
+    background: #fafafa;
+    color: #1f1f1f;
+    font-weight: 600;
+  }
+  
+  .financial-records .ant-table-tbody > tr:hover > td {
+    background: #f5f5f5;
+  }
+  
+  /* Drawer Styling */
+  .financial-records .rent-drawer .drawer-statistic {
+    margin-bottom: 24px;
+  }
+  
+  .financial-records .rent-drawer .drawer-progress {
+    margin-bottom: 32px;
+  }
+  
+  .financial-records .rent-drawer .ant-list-item-meta-title {
+    margin-bottom: 4px;
+  }
+  
+  .financial-records .rent-drawer .ant-list-item-meta-description {
+    color: #1890ff;
+  }
+  
+  /* Tab Icons Styling */
+  .financial-records .ant-tabs-tab .anticon {
+    margin-right: 8px;
+    color: #1890ff;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .financial-records {
+      padding: 16px;
+    }
+    
+    .financial-records .rent-drawer {
+      width: 100% !important;
+    }
+  }
+  
+  /* Statistics Styling */
+  .financial-records .ant-statistic-title {
+    color: #8c8c8c;
+    font-size: 14px;
+  }
+  
+  .financial-records .ant-statistic-content {
+    color: #1f1f1f;
+    font-size: 24px;
+  }
+  
+  .financial-records .ant-statistic-content-prefix {
+    color: #1890ff;
+  }
+  
+  /* Tag Styling */
+  .financial-records .ant-tag {
+    border-radius: 4px;
+    padding: 2px 8px;
+  }
+  
+  /* Progress Bar Styling */
+  .financial-records .ant-progress-bg {
+    background: #1890ff;
+  }
+
+
+
+  .rent-details-page {
+    padding: 24px;
+    background: #f0f2f5;
+    min-height: 100vh;
+  }
+  
+  .rent-details-page .rent-details-card {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  }
+  
+  /* Church Header Styling */
+  .rent-details-page .church-header {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin-bottom: 24px;
+  }
+  
+  .rent-details-page .church-logo {
+    flex-shrink: 0;
+  }
+  
+  .rent-details-page .logo-placeholder {
+    width: 100px;
+    height: 100px;
+    border: 1px solid gainsboro;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+  }
+  .logo-placeholder img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .rent-details-page .church-info {
+    flex-grow: 1;
+  }
+  
+  .rent-details-page .church-info h2 {
+    color: #1890ff;
+    margin-bottom: 8px;
+  }
+  
+  .rent-details-page .church-info .ant-typography {
+    display: block;
+    color: #666;
+  }
+  
+  /* Rent Info Section */
+  .rent-details-page .rent-info-section {
+    margin: 24px 0;
+  }
+  
+  .rent-details-page .rent-progress {
+    margin-top: 12px;
+  }
+  
+  /* Contributors Table */
+  .rent-details-page .contributors-section {
+    margin: 24px 0;
+  }
+  
+  .rent-details-page .contributors-table {
+    margin-top: 16px;
+  }
+  
+  .rent-details-page .contributors-table .ant-table-thead > tr > th {
+    background: #fafafa;
+    font-weight: 600;
+  }
+  
+  /* Summary Cards */
+  .rent-details-page .summary-section {
+    margin: 24px 0;
+  }
+  
+  .rent-details-page .summary-card {
+    background: #fafafa;
+    border-radius: 8px;
+  }
+  #rent-detail-wraphead{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 8px #0000000f;
+    background-color: #0000000f;
+    padding: 10px;
+
+  }
+  /* Action Buttons */
+  .rent-details-page .action-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 32px;
+    padding-top: 24px;
+    border-top: 1px solid #f0f0f0;
+  }
+  
+  /* Print Styles */
+  @media print {
+    .rent-details-page {
+      padding: 0;
+      background: white;
+    }
+  
+    .rent-details-page .rent-details-card {
+      box-shadow: none;
+      margin: 0;
+      padding: 40px;
+    }
+  
+    .rent-details-page .action-buttons {
+      display: none;
+    }
+  
+    .rent-details-page .ant-card {
+      border: none;
+    }
+  
+    .rent-details-page .ant-divider {
+      background: #000;
+    }
+  
+    /* Ensure tables break properly across pages */
+    .rent-details-page .contributors-table {
+      page-break-inside: auto;
+    }
+  
+    .rent-details-page .contributors-table tr {
+      page-break-inside: avoid;
+      page-break-after: auto;
+    }
+  
+    /* Improve contrast for printing */
+    .rent-details-page .ant-typography {
+      color: #000 !important;
+    }
+  
+    .rent-details-page .ant-table {
+      color: #000 !important;
+    }
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .rent-details-page {
+      padding: 16px;
+    }
+  
+    .rent-details-page .church-header {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .rent-details-page .church-info {
+      text-align: center;
+    }
+  
+    .rent-details-page .action-buttons {
+      flex-direction: column;
+      gap: 12px;
+    }
+  
+    .rent-details-page .action-buttons .ant-btn {
+      width: 100%;
+    }
+  
+    .rent-details-page .ant-table {
+      overflow-x: auto;
+    }
+  }
+  
+  /* Custom Scrollbar */
+  .rent-details-page ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  
+  .rent-details-page ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  .rent-details-page ::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 3px;
+  }
+  
+  .rent-details-page ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }

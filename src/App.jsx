@@ -12,6 +12,7 @@ import Signup from "./auth/Signup";
 import Dashboard from "./pages/dashboard/Dashboard";
 import Home from "./pages/home/Home";
 import Members from "./pages/members/Members";
+import Admin from "./pages/admn/Admin";
 import Notifications from "./pages/notices/Notifications";
 import Payments from "./pages/payments/Payments";
 import Profile from "./pages/profile/Profile";
@@ -25,6 +26,10 @@ import Records from "./pages/records/churchrecords/Records";
 import Rentdetails from "./pages/records/rent/Rentdetails";
 import Rentreciept from "./pages/records/rent/Rentreciept";
 import MemberDetails from "./pages/members/MemberDetails";
+import Financials from "./pages/admn/financials/Financials";
+import AdminView from "./pages/admn/admnview/AdminView";
+import ChurchMembers from "./pages/admn/churchmembers/ChurchMembers";
+import RentDetails from "./pages/admn/financials/RentDetails";
 function App() {
   const router = createBrowserRouter(
     createRoutesFromElements(
@@ -48,6 +53,21 @@ function App() {
           <Route path="offerings" element={<Offering/>} />
           <Route path="pledges" element={<Pledges/>} />
           <Route path="records" element={<Records/>} />
+        </Route>
+
+        <Route path="/admnistration" element={<Admin/>}>
+          <Route index element={<AdminView/>} />
+          <Route path="overview" element={<AdminView/>} />
+          <Route path="members" element={<ChurchMembers/>} />
+          <Route path="financials" element={<Financials/>} />
+          <Route path="rent-details" element={<RentDetails/>} />
+          {/* <Route path="clients" element={<Clients/>} />
+          <Route path="orders" element={<AdmnOrders/>} />
+          <Route path="products" element={<Products/>} />
+          <Route path="blogs" element={<AdmnBlogs/>} />
+          <Route path="support" element={<AdmnSupport/>} />
+          <Route path="notifications" element={<AdmnNotifications/>} />
+          <Route path="profile" element={<AdmnProfile/>} /> */}
         </Route>
       </Route>
     )
