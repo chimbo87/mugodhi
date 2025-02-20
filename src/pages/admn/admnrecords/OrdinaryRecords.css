@@ -1,0 +1,111 @@
+.records-container {
+    padding: 20px;
+    background: #ececec;
+  }
+  
+  .records-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+  }
+  
+  .records-search-filter {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+  }
+  
+  .record-card {
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 16px;
+    border: 1px solid #f0f0f0;
+    transition: all 0.3s ease;
+  }
+  
+  .record-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  }
+  
+  .record-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 12px;
+  }
+  
+  .record-title {
+    font-weight: 600;
+    color: #1a1a1a;
+    margin: 0;
+  }
+  
+  .record-meta {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    color: #8c8c8c;
+    margin-bottom: 12px;
+  }
+  
+  .record-content {
+    margin-bottom: 16px;
+    color: #4a4a4a;
+  }
+  
+  .record-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 12px;
+    border-top: 1px solid #f0f0f0;
+  }
+  
+  .record-actions {
+    display: flex;
+    gap: 8px;
+  }
+  
+  .prophecy-status-pending {
+    color: #faad14;
+  }
+  
+  .prophecy-status-fulfilled {
+    color: #52c41a;
+  }
+  
+  .prophecy-status-in-progress {
+    color: #1890ff;
+  }
+  
+  .disciplinary-status-active {
+    color: #ff4d4f;
+  }
+  
+  .disciplinary-status-resolved {
+    color: #52c41a;
+  }
+  
+  /* Empty state styles */
+  .records-empty {
+    text-align: center;
+    padding: 48px 0;
+    color: #8c8c8c;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .records-header {
+      flex-direction: column;
+      gap: 16px;
+      align-items: flex-start;
+    }
+  
+    .records-search-filter {
+      flex-direction: column;
+      width: 100%;
+    }
+  }

@@ -33,6 +33,10 @@ import SinglememberDetails from "./pages/admn/churchmembers/SinglememberDetails"
 import RentDetails from "./pages/admn/financials/RentDetails";
 import Secretary from "./pages/admn/secretaries/Secretary";
 import SecretaryDetails from "./pages/admn/secretaries/SecretaryDetails";
+import ChurchEvents from "./pages/admn/churchevents/ChurchEvents";
+import AdminNotifications from "./pages/admn/admnotify/AdmniNotifications";
+import OrdinaryRecords from "./pages/admn/admnrecords/OrdinaryRecords";
+import AdmnProfile from "./pages/admn/admnprofile/AdmnProfile";
 
 function App() {
   const router = createBrowserRouter(
@@ -68,6 +72,10 @@ function App() {
           <Route path="rent-details" element={<RentDetails/>} />
           <Route path="church-secretaries" element={<Secretary/>} />
           <Route path="secretary-details" element={<SecretaryDetails/>} />
+          <Route path="church-events" element={<ChurchEvents/>} />
+          <Route path="notifications" element={<AdminNotifications/>} />
+          <Route path="records" element={<OrdinaryRecords/>} />
+          <Route path="profile" element={<AdmnProfile/>} />
         </Route>
       </Route>
     )

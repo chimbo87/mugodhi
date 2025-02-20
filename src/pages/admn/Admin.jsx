@@ -39,7 +39,7 @@ function Admin() {
             <img src={logo} alt="logo" />
             <div>
               <small style={{ color: "antiquewhite", fontWeight: "700" }}>
-              A Chimbo
+                A Chimbo
               </small>
               <br></br>
               <small style={{ color: "white" }}>Secretary</small>
@@ -67,7 +67,7 @@ function Admin() {
                 }}
               >
                 <PiUsersThree id="dashboardSideBarBtnsIcons" />
-               Church Members
+                Church Members
               </button>
             </div>
             <div id="admnSideBarBtnsDiv">
@@ -79,7 +79,7 @@ function Admin() {
                 }}
               >
                 <GoGift id="dashboardSideBarBtnsIcons" />
-             Secretaries
+                Secretaries
               </button>
             </div>
 
@@ -92,33 +92,33 @@ function Admin() {
                 }}
               >
                 <MdOutlineProductionQuantityLimits id="dashboardSideBarBtnsIcons" />
-               Financial Records
+                Financial Records
               </button>
             </div>
 
             <div id="admnSideBarBtnsDiv">
               <button
-                style={getButtonStyle("blogs")}
+                style={getButtonStyle("church-events")}
                 onClick={() => {
-                  handleButtonClick("blogs");
-                  navigate("/admnistration/blogs");
+                  handleButtonClick("church-events");
+                  navigate("/admnistration/church-events");
                 }}
               >
                 {" "}
                 <GrBlog id="dashboardSideBarBtnsIcons" />
-           Church Events
+                Church Events
               </button>
             </div>
             <div id="admnSideBarBtnsDiv">
               <button
-                style={getButtonStyle("support")}
+                style={getButtonStyle("records")}
                 onClick={() => {
-                  handleButtonClick("support");
-                  navigate("/admnistration/support");
+                  handleButtonClick("recordst");
+                  navigate("/admnistration/records");
                 }}
               >
                 <MdOutlineContactSupport id="dashboardSideBarBtnsIcons" />
-               Ordinary Records
+                Ordinary Records
               </button>
             </div>
             <div id="admnSideBarBtnsDiv">
@@ -140,7 +140,13 @@ function Admin() {
           </div>
         </div>
         <div id="admn-logout-box">
-          <button>Logout</button>
+          <button
+            onClick={() => {
+              navigate("/");
+            }}
+          >
+            Logout
+          </button>
         </div>
       </div>
       <div id="dashBoardContent">
