@@ -105,3 +105,103 @@
       width: 100%;
     }
   }
+
+
+
+  .member-details-container {
+    padding: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .church-logo {
+    text-align: center;
+    margin-bottom: 32px;
+  }
+  
+  .logo-image {
+    max-height: 80px;
+    object-fit: contain;
+  }
+  
+  .member-details-card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .member-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 32px;
+  }
+  
+  .member-avatar {
+    background: #1890ff;
+    margin-right: 24px;
+  }
+  
+  .member-title {
+    flex: 1;
+  }
+  
+  .member-title h2 {
+    margin: 0;
+    margin-bottom: 8px;
+  }
+  
+  .member-descriptions {
+    margin-bottom: 32px;
+  }
+  
+  .notes-section {
+    margin-bottom: 32px;
+  }
+  
+  .notes-section h4 {
+    margin-bottom: 16px;
+  }
+  
+  .notes-card {
+    background: #fafafa;
+  }
+  
+  .action-buttons {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 32px;
+  }
+  
+  .edit-button {
+    background: #1890ff;
+  }
+  
+  .suspend-button {
+    background: #fff;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .member-details-container {
+      padding: 16px;
+    }
+  
+    .member-header {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .member-avatar {
+      margin: 0;
+      margin-bottom: 16px;
+    }
+  
+    .action-buttons {
+      flex-direction: column;
+      gap: 12px;
+    }
+  
+    .action-buttons button {
+      width: 100%;
+    }
+  }

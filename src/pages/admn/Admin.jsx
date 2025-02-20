@@ -39,10 +39,10 @@ function Admin() {
             <img src={logo} alt="logo" />
             <div>
               <small style={{ color: "antiquewhite", fontWeight: "700" }}>
-                C Mhosira
+              A Chimbo
               </small>
               <br></br>
-              <small style={{ color: "white" }}>Managing Director</small>
+              <small style={{ color: "white" }}>Secretary</small>
             </div>
           </div>
           <div id="dashboardSideBarBtns">

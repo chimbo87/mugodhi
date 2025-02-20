@@ -29,8 +29,11 @@ import MemberDetails from "./pages/members/MemberDetails";
 import Financials from "./pages/admn/financials/Financials";
 import AdminView from "./pages/admn/admnview/AdminView";
 import ChurchMembers from "./pages/admn/churchmembers/ChurchMembers";
+import SinglememberDetails from "./pages/admn/churchmembers/SinglememberDetails";
 import RentDetails from "./pages/admn/financials/RentDetails";
 import Secretary from "./pages/admn/secretaries/Secretary";
+import SecretaryDetails from "./pages/admn/secretaries/SecretaryDetails";
+
 function App() {
   const router = createBrowserRouter(
     createRoutesFromElements(
@@ -60,9 +63,11 @@ function App() {
           <Route index element={<AdminView/>} />
           <Route path="overview" element={<AdminView/>} />
           <Route path="members" element={<ChurchMembers/>} />
+          <Route path="member-details" element={<SinglememberDetails/>} />
           <Route path="financials" element={<Financials/>} />
           <Route path="rent-details" element={<RentDetails/>} />
           <Route path="church-secretaries" element={<Secretary/>} />
+          <Route path="secretary-details" element={<SecretaryDetails/>} />
         </Route>
       </Route>
     )
