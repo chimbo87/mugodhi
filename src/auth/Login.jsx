@@ -68,7 +68,7 @@ function Login() {
             className="btn btn-primary"
             style={{ width: "100%" }}
           >
-            Login
+            Sign In
           </button>
         </form>
         <div id="rtys-box">
