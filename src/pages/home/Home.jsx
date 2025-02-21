@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import { IoNotificationsOutline } from "react-icons/io5";
+import { MdArrowForwardIos } from "react-icons/md";
 import userlogo from "../../assets/images/person.jpeg";
 import { MdOutlineEventAvailable } from "react-icons/md";
-import { HiOutlineChatAlt } from "react-icons/hi";
+import { PiBell } from "react-icons/pi";
 import { FaUsers } from "react-icons/fa";
 import { TbReportMoney } from "react-icons/tb";
 import { Button, Flex, Progress, Badge } from "antd";
@@ -53,10 +53,10 @@ function Home() {
           <div id="home-page-headuser">
             <div
               id="home-page-headiconbox"
-              onClick={() => navigate("/dashboard/messaging")}
+              onClick={() => navigate("/dashboard/notifications")}
             >
               <Badge count={4}>
-                <HiOutlineChatAlt  id="home-page-headicon" />
+                <PiBell id="home-page-headicon" />
               </Badge>
             </div>
             <img
@@ -84,61 +84,73 @@ function Home() {
                   <p>December 2024</p>
                 </div>
               </div>
-              <Button onClick={() => navigate("/dashboard/members")} type="primary">
-                View more
-              </Button>
+              <div id="home-view-wrap">
+                <Button onClick={() => navigate("/dashboard/members")}>
+                  View more
+                </Button>
+                <MdArrowForwardIos />
+              </div>
             </div>
           </div>
           <div class="col-lg-4 col-md-4">
             <div id="home-card">
               <div id="home-card-innerbox">
-                <p>Wedding Pledges</p>
-            
-                <TbReportMoney id="home-card-innerboxicon"/>
+                <p>Rent February 2025</p>
+
+                <TbReportMoney id="home-card-innerboxicon" />
               </div>
               <div id="home-card-innerbox">
                 <div id="home-innerbox-card">
-                  <small>Total Pledges</small>
+                  <small>Contributors</small>
                   <p>20</p>
                 </div>
                 <div id="home-innerbox-card">
                   <small>Progress</small>
-                 <p>
-                 <Flex
-                    vertical
-                    gap="small"
-                    style={{
-                      width: 180,
-                    }}
-                  >
-                    <Progress percent={30} size="large" />
-                  </Flex>
-                 </p>
+                  <p>
+                    <Flex
+                      vertical
+                      gap="small"
+                      style={{
+                        width: 180,
+                      }}
+                    >
+                      <Progress percent={30} size="large" />
+                    </Flex>
+                  </p>
                 </div>
               </div>
-              <Button type="primary">View more</Button>
+              <div id="home-view-wrap">
+                <Button onClick={() => navigate("/dashboard/payments")}>
+                  View more
+                </Button>
+                <MdArrowForwardIos />
+              </div>
             </div>
           </div>
           <div class="col-lg-4 col-md-4">
             <div id="home-card">
               <div id="home-card-innerbox">
-                <p>Events</p>
+                <p>Upcoming Event</p>
                 <MdOutlineEventAvailable id="home-card-innerboxicon" />
               </div>
               <div id="home-card-innerbox">
                 <div id="home-innerbox-card">
-                  <small>Total Events</small>
-                  <p>108</p>
+                  <small>Event Name</small>
+                  <p>All Night Prayer</p>
                 </div>
                 <div id="home-innerbox-card">
-                  <small>Upcoming Event</small>
+                  <small>Time</small>
                   <p>2days 17hrs Left</p>
                 </div>
               </div>
-              <Button type="primary">View more</Button>
+              <div id="home-view-wrap">
+                <Button onClick={() => navigate("/dashboard/events")}>
+                  View more
+                </Button>
+                <MdArrowForwardIos />
+              </div>
             </div>
           </div>
-      
         </div>
       </div>
       <div className="row">
@@ -152,21 +164,9 @@ function Home() {
                 <CartesianGrid strokeDasharray="3 3" />
                 <Tooltip />
                 <Legend />
-                <Bar
-                  dataKey="Rent"
-                  fill="#8884d8"
-                  strokeWidth={2}
-                />
-                <Bar
-                  dataKey="Pledges"
-                  fill="#82ca9d"
-                  strokeWidth={2}
-                />
-                <Bar
-                  dataKey="Offering"
-                  fill="#FFBB28"
-                  strokeWidth={2}
-                />
+                <Bar dataKey="Rent" fill="#8884d8" strokeWidth={2} />
+                <Bar dataKey="Pledges" fill="#82ca9d" strokeWidth={2} />
+                <Bar dataKey="Offering" fill="#FFBB28" strokeWidth={2} />
               </BarChart>
             </ResponsiveContainer>
           </div>

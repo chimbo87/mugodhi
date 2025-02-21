@@ -25,7 +25,7 @@ function Dashboard() {
   // Custom style for active button
   const getButtonStyle = (buttonName) => {
     return activeButton === buttonName
-      ? { backgroundColor: "#00a6ff", color: "white" }
+      ? { backgroundColor: "#1890ff", color: "white" }
       : {};
   };
 
@@ -72,112 +72,44 @@ function Dashboard() {
                   <LuCalendarClock id="dashboardSideBarBtnsIcons" /> Events
                 </button>
               </div>
-
-              <div id="dashboardSideBarBtnsColpse">
-                <Collapse ghost>
-                  <Panel
-                    header={
-                      <button id="records-btn-colapse">
-                        <span>Financial Records</span>
-                      </button>
-                    }
-                    key="1"
-                  >
-                    <div className="church-records-buttons">
-                      <button
-                        className="nested-btn"
-                        style={getButtonStyle("rentPayments")}
-                        onClick={() => {
-                          handleButtonClick("rentPayments");
-                          navigate("/dashboard/rent");
-                        }}
-                      >
-                        Rent Payments
-                      </button>
-                      <button
-                        className="nested-btn"
-                        style={getButtonStyle("offerings")}
-                        onClick={() => {
-                          handleButtonClick("offerings");
-                          navigate("/dashboard/offerings");
-                        }}
-                      >
-                        Offerings
-                      </button>
-                      <button
-                        className="nested-btn"
-                        style={getButtonStyle("pledges")}
-                        onClick={() => {
-                          handleButtonClick("pledges");
-                          navigate("/dashboard/pledges");
-                        }}
-                      >
-                        Pledges
-                      </button>
-                    </div>
-                  </Panel>
-                </Collapse>
-              </div>
-              {/* Similar modifications for other buttons... */}
               <div id="dashboardSideBarBtnsDiv">
                 <button
-                  style={getButtonStyle("reports")}
-                  onClick={() => handleButtonClick("reports")}
+                  style={getButtonStyle("payments")}
+                  onClick={() => {
+                    handleButtonClick("payments");
+                    navigate("/dashboard/payments");
+                  }}
                 >
-                  {/* <IoNotificationsOutline id="dashboardSideBarBtnsIcons" /> */}
-                  <HiOutlineClipboardDocumentList id="dashboardSideBarBtnsIcons" />
-                  Reports
+                  <LuCalendarClock id="dashboardSideBarBtnsIcons" />Financial Records
                 </button>
               </div>
-              <div id="dashboardSideBarBtnsColpse">
-                <Collapse ghost>
-                  <Panel
-                    header={
-                      <button id="records-btn-colapse">
-                        <span>Church Records</span>
-                      </button>
-                    }
-                    key="1"
-                  >
-                    <div className="church-records-buttons">
-                      <button
-                        className="nested-btn"
-                        style={getButtonStyle("prophecy")}
-                        onClick={() => handleButtonClick("prophecy")}
-                      >
-                        Prophecy Records
-                      </button>
-                      <button
-                        className="nested-btn"
-                        style={getButtonStyle("displinary")}
-                        onClick={() => handleButtonClick("displinary")}
-                      >
-                        Displinary Records
-                      </button>
-                      <button
-                        className="nested-btn"
-                        style={getButtonStyle("babtism")}
-                        onClick={() => handleButtonClick("babtism")}
-                      >
-                        Babtism Records
-                      </button>
-                      <button
-                        className="nested-btn"
-                        style={getButtonStyle("meeting")}
-                        onClick={() => handleButtonClick("meeting")}
-                      >
-                        Meeting Records
-                      </button>
-                    </div>
-                  </Panel>
-                </Collapse>
-              </div>
+
               <div id="dashboardSideBarBtnsDiv">
                 <button
-                  style={getButtonStyle("profile")}
-                  onClick={() => handleButtonClick("profile")}
+                
+                  style={getButtonStyle("records")}
+                  onClick={() => {
+                    handleButtonClick("records");
+                    navigate("/dashboard/records");
+                  }}
+                
                 >
-                  <FaRegUser id="dashboardSideBarBtnsIcons" /> Profile
+                
+                  <HiOutlineClipboardDocumentList id="dashboardSideBarBtnsIcons" />
+                  Church Records
+                </button>
+              </div>
+
+              <div id="dashboardSideBarBtnsDiv">
+                <button
+                 
+                  style={getButtonStyle("notifications")}
+                  onClick={() => {
+                    handleButtonClick("notifications");
+                    navigate("/dashboard/notifications");
+                  }}
+                >
+                  <FaRegUser id="dashboardSideBarBtnsIcons"/>Notifications
                 </button>
               </div>
             </div>

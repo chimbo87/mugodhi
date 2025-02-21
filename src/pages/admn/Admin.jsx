@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 import { Outlet } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-import { GrBlog } from "react-icons/gr";
 import logo from "../../assets/images/person.jpeg";
 import { RiDashboardLine } from "react-icons/ri";
-import { MdOutlineProductionQuantityLimits } from "react-icons/md";
+import { LuCalendarClock } from "react-icons/lu";
 import { RiNotification2Line } from "react-icons/ri";
-import { MdOutlineContactSupport } from "react-icons/md";
+import { HiOutlineClipboardDocumentList } from "react-icons/hi2";
 import { PiUsersThree } from "react-icons/pi";
-import { GoGift } from "react-icons/go";
+import { HiOutlineUserAdd } from "react-icons/hi";
+import { GrMoney } from "react-icons/gr";
 import { Badge } from "antd";
 import "./Admin.css";
 function Admin() {
@@ -78,7 +78,7 @@ function Admin() {
                   navigate("/admnistration/church-secretaries");
                 }}
               >
-                <GoGift id="dashboardSideBarBtnsIcons" />
+             <HiOutlineUserAdd id="dashboardSideBarBtnsIcons" />
                 Secretaries
               </button>
             </div>
@@ -91,7 +91,7 @@ function Admin() {
                   navigate("/admnistration/financials");
                 }}
               >
-                <MdOutlineProductionQuantityLimits id="dashboardSideBarBtnsIcons" />
+               <GrMoney id="dashboardSideBarBtnsIcons" />
                 Financial Records
               </button>
             </div>
@@ -105,7 +105,7 @@ function Admin() {
                 }}
               >
                 {" "}
-                <GrBlog id="dashboardSideBarBtnsIcons" />
+                <LuCalendarClock id="dashboardSideBarBtnsIcons" />
                 Church Events
               </button>
             </div>
@@ -117,7 +117,7 @@ function Admin() {
                   navigate("/admnistration/records");
                 }}
               >
-                <MdOutlineContactSupport id="dashboardSideBarBtnsIcons" />
+                <HiOutlineClipboardDocumentList id="dashboardSideBarBtnsIcons" />
                 Ordinary Records
               </button>
             </div>
