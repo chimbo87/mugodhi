@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import churchlogo from "../assets/images/logo.png";
+import { useNavigate } from "react-router-dom";
 import {
   Form,
   Input,
@@ -25,6 +26,7 @@ import {
 const { Option } = Select;
 
 function Signup() {
+  const navigate = useNavigate();
   const [form] = Form.useForm();
   const [currentStep, setCurrentStep] = useState(0);
   const [loading, setLoading] = useState(false);
@@ -464,7 +466,7 @@ function Signup() {
           <div className="signup-login-link">
             <Typography.Text>
               Already have an account?{" "}
-              <Typography.Link>Sign in</Typography.Link>
+              <Typography.Link  onClick={() => navigate("/")}>Sign in</Typography.Link>
             </Typography.Text>
           </div>
         </Form>

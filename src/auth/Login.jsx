@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import { Form, Input, Button, Card, Typography, message } from "antd";
 import churchlogo from "../assets/images/logo.png";
+import { useNavigate } from "react-router-dom";
 import { UserOutlined, LockOutlined } from "@ant-design/icons";
 import "./Login.css";
 
 function Login() {
+  const navigate = useNavigate();
   const [loading, setLoading] = useState(false);
 
   const onFinish = (values) => {
@@ -91,7 +93,7 @@ function Login() {
           <div className="login-register">
             <Typography.Text>
               Don't have an account?{" "}
-              <Typography.Link>Register now</Typography.Link>
+              <Typography.Link  onClick={() => navigate("/signup")}>Register now</Typography.Link>
             </Typography.Text>
           </div>
         </Form>
