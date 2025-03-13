@@ -1,7 +1,19 @@
 import React, { useState } from "react";
-import { Form, Input, Button, Card, Typography, Steps, message } from "antd";
-import { UserOutlined, LockOutlined, PhoneOutlined, HomeOutlined, TeamOutlined } from "@ant-design/icons";
+import churchlogo from "../assets/images/logo.png";
+import { Form, Input, Button, Card, Typography, Steps, Select, DatePicker, message } from "antd";
+import { 
+  UserOutlined, 
+  LockOutlined, 
+  PhoneOutlined, 
+  HomeOutlined, 
+  TeamOutlined,
+  MailOutlined,
+  EnvironmentOutlined,
+  CalendarOutlined
+} from "@ant-design/icons";
 
+
+const { Option } = Select;
 
 function Signup() {
   const [form] = Form.useForm();
@@ -12,8 +24,11 @@ function Signup() {
     try {
       // Validate the fields in the current step
       if (currentStep === 0) {
-        await form.validateFields(['name', 'surname', 'email', 'phone']);
+        await form.validateFields(['name', 'surname', 'email', 'phone', 'dateOfBirth']);
         setCurrentStep(1);
+      } else if (currentStep === 1) {
+        await form.validateFields(['streetAddress', 'town', 'city', 'zipCode', 'state', 'country']);
+        setCurrentStep(2);
       }
     } catch (error) {
       console.log('Validation failed:', error);
@@ -21,7 +36,7 @@ function Signup() {
   };
 
   const handleBack = () => {
-    setCurrentStep(0);
+    setCurrentStep(currentStep - 1);
   };
 
   const onFinish = (values) => {
@@ -36,17 +51,17 @@ function Signup() {
 
   return (
     <div className="signup-container">
-      <Card className="signup-card">
+      <div className="signup-card">
         <div className="signup-logo-container">
           <img 
-            src="/api/placeholder/120/120" 
-            alt="Company Logo" 
+            src={churchlogo} 
+            alt="Church Logo" 
             className="signup-logo" 
           />
         </div>
         
         <Typography.Title level={3} className="signup-title">
-          Create an Account
+          Church Secretary Registration
         </Typography.Title>
         
         <Steps
@@ -54,7 +69,8 @@ function Signup() {
           className="signup-steps"
           items={[
             { title: 'Personal Info' },
-            { title: 'Account Details' },
+            { title: 'Address Details' },
+            { title: 'Church Details' }
           ]}
         />
         
@@ -66,7 +82,7 @@ function Signup() {
           layout="vertical"
           scrollToFirstError
         >
-          {currentStep === 0 ? (
+          {currentStep === 0 && (
             // Step 1: Personal Information
             <div className="signup-step-content">
               <div className="signup-form-row">
@@ -108,7 +124,7 @@ function Signup() {
                   ]}
                 >
                   <Input 
-                    prefix={<UserOutlined className="signup-icon" />} 
+                    prefix={<MailOutlined className="signup-icon" />} 
                     placeholder="Email Address" 
                     size="large"
                   />
@@ -128,20 +144,201 @@ function Signup() {
                 </Form.Item>
               </div>
               
-              <Form.Item className="signup-navigation">
-                <Button 
-                  type="primary" 
-                  onClick={handleNext}
-                  className="signup-button"
-                  block
+              <div className="signup-form-row">
+                <Form.Item
+                  name="dateOfBirth"
+                  label="Date of Birth"
+                  className="signup-form-item"
+                  rules={[{ required: true, message: "Please select your date of birth" }]}
                 >
-                  Next
-                </Button>
-              </Form.Item>
+                  <DatePicker 
+                    size="large"
+                    className="signup-date-picker"
+                    placeholder="Select date"
+                    prefix={<CalendarOutlined className="signup-icon" />}
+                  />
+                </Form.Item>
+                
+                <Form.Item
+                  name="gender"
+                  label="Gender"
+                  className="signup-form-item"
+                >
+                  <Select
+                    size="large"
+                    placeholder="Select gender"
+                  >
+                    <Option value="male">Male</Option>
+                    <Option value="female">Female</Option>
+                    <Option value="other">Prefer not to say</Option>
+                  </Select>
+                </Form.Item>
+              </div>
             </div>
-          ) : (
-            // Step 2: Account Details
+          )}
+          
+          {currentStep === 1 && (
+            // Step 2: Address Details
             <div className="signup-step-content">
+              <div className="signup-form-row">
+                <Form.Item
+                  name="streetAddress"
+                  label="Street Address"
+                  className="signup-form-item"
+                  rules={[{ required: true, message: "Please enter your street address" }]}
+                >
+                  <Input 
+                    prefix={<HomeOutlined className="signup-icon" />} 
+                    placeholder="Street Address" 
+                    size="large"
+                  />
+                </Form.Item>
+                
+                <Form.Item
+                  name="town"
+                  label="Town/Suburb"
+                  className="signup-form-item"
+                  rules={[{ required: true, message: "Please enter your town" }]}
+                >
+                  <Input 
+                    prefix={<EnvironmentOutlined className="signup-icon" />} 
+                    placeholder="Town" 
+                    size="large"
+                  />
+                </Form.Item>
+              </div>
+              
+              <div className="signup-form-row">
+                <Form.Item
+                  name="city"
+                  label="City"
+                  className="signup-form-item"
+                  rules={[{ required: true, message: "Please enter your city" }]}
+                >
+                  <Input 
+                    prefix={<EnvironmentOutlined className="signup-icon" />} 
+                    placeholder="City" 
+                    size="large"
+                  />
+                </Form.Item>
+                
+                <Form.Item
+                  name="zipCode"
+                  label="Zip/Postal Code"
+                  className="signup-form-item"
+                  rules={[{ required: true, message: "Please enter your zip code" }]}
+                >
+                  <Input 
+                    placeholder="Zip Code" 
+                    size="large"
+                  />
+                </Form.Item>
+              </div>
+              
+              <div className="signup-form-row">
+                <Form.Item
+                  name="state"
+                  label="State/Province"
+                  className="signup-form-item"
+                  rules={[{ required: true, message: "Please enter your state" }]}
+                >
+                  <Input 
+                    placeholder="State" 
+                    size="large"
+                  />
+                </Form.Item>
+                
+                <Form.Item
+                  name="country"
+                  label="Country"
+                  className="signup-form-item"
+                  rules={[{ required: true, message: "Please select your country" }]}
+                >
+                  <Select
+                    size="large"
+                    placeholder="Select country"
+                    showSearch
+                  >
+                    <Option value="us">United States</Option>
+                    <Option value="ca">Canada</Option>
+                    <Option value="uk">United Kingdom</Option>
+                    <Option value="au">Australia</Option>
+                    <Option value="za">South Africa</Option>
+                    <Option value="ng">Nigeria</Option>
+                    <Option value="ke">Kenya</Option>
+                    <Option value="gh">Ghana</Option>
+                    <Option value="other">Other</Option>
+                  </Select>
+                </Form.Item>
+              </div>
+            </div>
+          )}
+          
+          {currentStep === 2 && (
+            // Step 3: Church Details & Account
+            <div className="signup-step-content">
+              <div className="signup-form-row">
+                <Form.Item
+                  name="churchPosition"
+                  label="Church Position"
+                  className="signup-form-item"
+                  rules={[{ required: true, message: "Please enter your church position" }]}
+                >
+                  <Input 
+                    prefix={<TeamOutlined className="signup-icon" />} 
+                    placeholder="Church Position" 
+                    size="large"
+                  />
+                </Form.Item>
+                
+                <Form.Item
+                  name="churchName"
+                  label="Church Name"
+                  className="signup-form-item"
+                  rules={[{ required: true, message: "Please enter your church name" }]}
+                >
+                  <Input 
+                    placeholder="Church Name" 
+                    size="large"
+                  />
+                </Form.Item>
+              </div>
+              
+              <div className="signup-form-row">
+                <Form.Item
+                  name="departmentResponsibility"
+                  label="Department/Responsibility"
+                  className="signup-form-item"
+                  rules={[{ required: true, message: "Please enter your department" }]}
+                >
+                  <Select
+                    size="large"
+                    placeholder="Select department"
+                  >
+                    <Option value="accounts">Accounts</Option>
+                    <Option value="membership">Membership</Option>
+                    <Option value="events">Events</Option>
+                    <Option value="worship">Worship</Option>
+                    <Option value="youth">Youth</Option>
+                    <Option value="children">Children</Option>
+                    <Option value="media">Media</Option>
+                    <Option value="other">Other</Option>
+                  </Select>
+                </Form.Item>
+                
+                <Form.Item
+                  name="yearsOfService"
+                  label="Years of Service"
+                  className="signup-form-item"
+                >
+                  <Input 
+                    type="number"
+                    placeholder="Years of Service" 
+                    size="large"
+                  />
+                </Form.Item>
+              </div>
+              
               <div className="signup-form-row">
                 <Form.Item
                   name="password"
@@ -183,53 +380,40 @@ function Signup() {
                   />
                 </Form.Item>
               </div>
-              
-              <div className="signup-form-row">
-                <Form.Item
-                  name="address"
-                  label="Address"
-                  className="signup-form-item"
-                  rules={[{ required: true, message: "Please enter your address" }]}
-                >
-                  <Input 
-                    prefix={<HomeOutlined className="signup-icon" />} 
-                    placeholder="Address" 
-                    size="large"
-                  />
-                </Form.Item>
-                
-                <Form.Item
-                  name="churchPosition"
-                  label="Church Position"
-                  className="signup-form-item"
-                  rules={[{ required: true, message: "Please enter your church position" }]}
-                >
-                  <Input 
-                    prefix={<TeamOutlined className="signup-icon" />} 
-                    placeholder="Church Position" 
-                    size="large"
-                  />
-                </Form.Item>
-              </div>
-              
-              <div className="signup-navigation">
-                <Button 
-                  onClick={handleBack}
-                  className="signup-back-button"
-                >
-                  Back
-                </Button>
-                <Button 
-                  type="primary" 
-                  htmlType="submit" 
-                  className="signup-submit-button"
-                  loading={loading}
-                >
-                  Create Account
-                </Button>
-              </div>
             </div>
           )}
+          
+          <div className="signup-navigation">
+            {currentStep > 0 && (
+              <Button 
+                onClick={handleBack}
+                className="signup-back-button"
+              >
+                Back
+              </Button>
+            )}
+            
+            {currentStep < 2 && (
+              <Button 
+                type="primary" 
+                onClick={handleNext}
+                className="signup-next-button"
+              >
+                Next
+              </Button>
+            )}
+            
+            {currentStep === 2 && (
+              <Button 
+                type="primary" 
+                htmlType="submit" 
+                className="signup-submit-button"
+                loading={loading}
+              >
+                Create Account
+              </Button>
+            )}
+          </div>
           
           <div className="signup-login-link">
             <Typography.Text>
@@ -238,7 +422,7 @@ function Signup() {
             </Typography.Text>
           </div>
         </Form>
-      </Card>
+      </div>
     </div>
   );
 }

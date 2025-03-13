@@ -103,6 +103,7 @@ background-color: #fff;
 
 
 
+
 /* Signup.css */
 .signup-container {
   display: flex;
@@ -111,19 +112,23 @@ background-color: #fff;
   min-height: 100vh;
   padding: 20px;
   background-color: #f5f8fa;
+
 }
 
 .signup-card {
   width: 100%;
   max-width: 800px;
   border-radius: 12px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.215);
+  padding: 20px;
+  background-color: #fff;
 }
 
 .signup-logo-container {
   display: flex;
   justify-content: center;
   margin-bottom: 24px;
+
 }
 
 .signup-logo {
@@ -137,6 +142,10 @@ background-color: #fff;
 }
 
 .signup-steps {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
   margin-bottom: 30px;
 }
 
@@ -160,6 +169,10 @@ background-color: #fff;
   min-width: 200px;
 }
 
+.signup-date-picker {
+  width: 100%;
+}
+
 .signup-icon {
   color: #bfbfbf;
 }
@@ -167,15 +180,7 @@ background-color: #fff;
 .signup-navigation {
   display: flex;
   justify-content: space-between;
-  margin-top: 16px;
-}
-
-.signup-button {
-  height: 46px;
-  border-radius: 8px;
-  font-weight: 500;
-  font-size: 16px;
-  flex: 1;
+  margin-top: 24px;
 }
 
 .signup-back-button {
@@ -183,8 +188,15 @@ background-color: #fff;
   border-radius: 8px;
   font-weight: 500;
   font-size: 16px;
-  margin-right: 16px;
-  min-width: 100px;
+  min-width: 120px;
+}
+
+.signup-next-button {
+  height: 46px;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 16px;
+  min-width: 120px;
 }
 
 .signup-submit-button {
@@ -192,16 +204,25 @@ background-color: #fff;
   border-radius: 8px;
   font-weight: 500;
   font-size: 16px;
-  flex: 1;
+  min-width: 180px;
 }
 
 .signup-login-link {
   text-align: center;
-  margin-top: 16px;
+  margin-top: 24px;
 }
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
+  .signup-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 5px;
+    background-color: #f5f8fa;
+
+  }
   .signup-form-item {
     flex: 1 1 100%;
   }
@@ -218,17 +239,21 @@ background-color: #fff;
     font-size: 20px !important;
   }
   
+  /* Keep navigation in row format even on small screens */
   .signup-navigation {
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-between;
   }
   
-  .signup-back-button {
-    margin-right: 0;
-    margin-bottom: 16px;
-    width: 100%;
-  }
-  
+  .signup-back-button,
+  .signup-next-button,
   .signup-submit-button {
-    width: 100%;
+    min-width: unset;
+    padding: 0 16px;
+  }
+  
+  /* For single button case (first screen) */
+  .signup-navigation:not(:has(.signup-back-button)) {
+    justify-content: flex-end;
   }
 }
