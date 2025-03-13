@@ -1,80 +1,100 @@
 import React, { useState } from "react";
+import { Form, Input, Button, Card, Typography, message } from "antd";
+import churchlogo from "../assets/images/logo.png";
+import { UserOutlined, LockOutlined } from "@ant-design/icons";
 import "./Login.css";
-import logo from "../assets/images/logo.png";
-import { useNavigate } from "react-router-dom";
-import { message } from "antd";
 
 function Login() {
-  const navigate = useNavigate();
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [loading, setLoading] = useState(false);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
-    // Check if the credentials match the provided ones
-    if (email === "chimbo@gmail.com" && password === "123456") {
-      message.success("Login successful 👋!");
-      navigate("/dashboard");
-    } else {
-      message.error("Invalid email or password.");
-    }
+  const onFinish = (values) => {
+    setLoading(true);
+    // Simulate login API call
+    setTimeout(() => {
+      console.log("Login values:", values);
+      message.success("Login successful!");
+      setLoading(false);
+    }, 1500);
   };
 
   return (
-    <div className="container-fluid" id="login-page">
-      <div id="login-page-box">
-        <div id="login-page-logo">
-          <img src={logo} alt="logo" />
+    <div className="login-container">
+      <div className="login-card">
+        <div className="login-logo-container">
+          <img 
+            src={churchlogo} 
+            alt="Company Logo" 
+            className="login-logo" 
+          />
         </div>
-        <form id="login-form" onSubmit={handleSubmit}>
-          <div className="mb-3">
-            <label htmlFor="exampleInputEmail1" className="form-label">
-              <small>Email address</small>
-            </label>
-            <input
-              type="email"
-              className="form-control"
-              id="exampleInputEmail1"
-              aria-describedby="emailHelp"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-            />
-          </div>
-          <div className="mb-3">
-            <label htmlFor="exampleInputPassword1" className="form-label">
-              <small>Password</small>
-            </label>
-            <input
-              type="password"
-              className="form-control"
-              id="exampleInputPassword1"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-            />
-          </div>
-          <div className="mb-3 form-check">
-            <input
-              type="checkbox"
-              className="form-check-input"
-              id="exampleCheck1"
-            />
-            <label className="form-check-label" htmlFor="exampleCheck1">
-              <small>Remember me</small>
-            </label>
-          </div>
-          <button
-            type="submit"
-            className="btn btn-primary"
-            style={{ width: "100%" }}
+        
+        <Typography.Title level={3} className="login-title">
+          Welcome Back
+        </Typography.Title>
+        
+        <Typography.Paragraph className="login-subtitle">
+          Sign in to your account
+        </Typography.Paragraph>
+        
+        <Form
+          name="login-form"
+          className="login-form"
+          initialValues={{ remember: true }}
+          onFinish={onFinish}
+          layout="vertical"
+        >
+          <Form.Item
+            name="email"
+            rules={[
+              { required: true, message: "Please input your email!" },
+              { type: "email", message: "Please enter a valid email address!" }
+            ]}
           >
-            Sign In
-          </button>
-        </form>
-        <div id="rtys-box">
-          <small>&copy; AFC Mugodhi Joburg Branch 2025.</small>
-          <small style={{ color: "gray" }}>Crafted By: chimbo</small>
-        </div>
+            <Input 
+              prefix={<UserOutlined className="login-icon" />} 
+              placeholder="Email address" 
+              size="large"
+              className="login-input"
+            />
+          </Form.Item>
+          
+          <Form.Item
+            name="password"
+            rules={[{ required: true, message: "Please input your password!" }]}
+          >
+            <Input.Password
+              prefix={<LockOutlined className="login-icon" />}
+              placeholder="Password"
+              size="large"
+              className="login-input"
+            />
+          </Form.Item>
+          
+          <Form.Item className="login-options">
+            <div className="login-forgot">
+              <Typography.Link>Forgot password?</Typography.Link>
+            </div>
+          </Form.Item>
+
+          <Form.Item>
+            <Button 
+              type="primary" 
+              htmlType="submit" 
+              className="login-button"
+              loading={loading}
+              block
+            >
+              Sign In
+            </Button>
+          </Form.Item>
+          
+          <div className="login-register">
+            <Typography.Text>
+              Don't have an account?{" "}
+              <Typography.Link>Register now</Typography.Link>
+            </Typography.Text>
+          </div>
+        </Form>
       </div>
     </div>
   );
