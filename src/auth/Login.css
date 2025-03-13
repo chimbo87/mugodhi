@@ -223,6 +223,13 @@ background-color: #fff;
     background-color: #f5f8fa;
 
   }
+  .signup-steps {
+    display: none;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+  }
   .signup-form-item {
     flex: 1 1 100%;
   }
@@ -255,5 +262,11 @@ background-color: #fff;
   /* For single button case (first screen) */
   .signup-navigation:not(:has(.signup-back-button)) {
     justify-content: flex-end;
+  }
+}
+
+@media (width: 400px) {
+  .signup-steps {
+    display: none;
   }
 }
