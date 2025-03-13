@@ -205,7 +205,7 @@ function Signup() {
                   <Select size="large" placeholder="Select gender">
                     <Option value="male">Male</Option>
                     <Option value="female">Female</Option>
-                    <Option value="other">Prefer not to say</Option>
+                   
                   </Select>
                 </Form.Item>
               </div>
