@@ -6,16 +6,15 @@
   min-height: 100vh;
   padding: 20px;
   background-color: #f5f8fa;
-
 }
 
 .login-card {
   width: 100%;
-  max-width: 450px;
-  border-radius: 12px;
+  max-width: 420px;
+  border-radius: 4px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.169);
-padding: 20px;
-background-color: #fff;
+  padding: 20px;
+  background-color: #fff;
 }
 
 .login-logo-container {
@@ -62,7 +61,7 @@ background-color: #fff;
 
 .login-button {
   height: 46px;
-  border-radius: 8px;
+  border-radius: 4px;
   font-weight: 500;
   font-size: 16px;
   margin-bottom: 16px;
@@ -81,28 +80,24 @@ background-color: #fff;
     min-height: 100vh;
     padding: 5px;
     background-color: #f5f8fa;
-
   }
   .login-card {
     padding: 16px;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.121);
   }
-  
+
   .login-logo {
     height: 50px;
   }
-  
+
   .login-title {
     font-size: 20px !important;
   }
-  
+
   .login-button {
     height: 44px;
   }
 }
-
-
-
 
 /* Signup.css */
 .signup-container {
@@ -112,15 +107,14 @@ background-color: #fff;
   min-height: 100vh;
   padding: 20px;
   background-color: #f5f8fa;
-
 }
 
 .signup-card {
   width: 100%;
-  max-width: 800px;
-  border-radius: 12px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.215);
-  padding: 20px;
+  max-width: 700px;
+  border-radius: 4px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.16);
+  padding: 20px 30px;
   background-color: #fff;
 }
 
@@ -128,7 +122,6 @@ background-color: #fff;
   display: flex;
   justify-content: center;
   margin-bottom: 24px;
-
 }
 
 .signup-logo {
@@ -142,10 +135,6 @@ background-color: #fff;
 }
 
 .signup-steps {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
   margin-bottom: 30px;
 }
 
@@ -192,16 +181,16 @@ background-color: #fff;
 }
 
 .signup-next-button {
-  height: 46px;
-  border-radius: 8px;
+  height: 40px;
+  border-radius: 4px;
   font-weight: 500;
   font-size: 16px;
   min-width: 120px;
 }
 
 .signup-submit-button {
-  height: 46px;
-  border-radius: 8px;
+  height: 40px;
+  border-radius: 4px;
   font-weight: 500;
   font-size: 16px;
   min-width: 180px;
@@ -221,7 +210,6 @@ background-color: #fff;
     min-height: 100vh;
     padding: 5px;
     background-color: #f5f8fa;
-
   }
   .signup-steps {
     display: none;
@@ -233,32 +221,32 @@ background-color: #fff;
   .signup-form-item {
     flex: 1 1 100%;
   }
-  
+
   .signup-card {
     padding: 16px;
   }
-  
+
   .signup-logo {
     height: 50px;
   }
-  
+
   .signup-title {
     font-size: 20px !important;
   }
-  
+
   /* Keep navigation in row format even on small screens */
   .signup-navigation {
     flex-direction: row;
     justify-content: space-between;
   }
-  
+
   .signup-back-button,
   .signup-next-button,
   .signup-submit-button {
     min-width: unset;
     padding: 0 16px;
   }
-  
+
   /* For single button case (first screen) */
   .signup-navigation:not(:has(.signup-back-button)) {
     justify-content: flex-end;
@@ -266,7 +254,8 @@ background-color: #fff;
 }
 
 @media (width: 400px) {
-  .signup-steps {
+  .signup-steps-box{
     display: none;
+    border: 1px solid red;
   }
 }
